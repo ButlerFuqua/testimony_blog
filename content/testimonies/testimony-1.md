@@ -3,6 +3,8 @@ title: This is my first testimony
 description: Learning how to use @nuxt/content to create a blog
 img: first-blog-post.jpg
 alt: first testimony
+tags: ["healing"]
+
 ---
 
 # My first testimony

@@ -3,6 +3,8 @@ title: This is my ninth testimony
 description: Learning how to use @nuxt/content to create a blog
 img: ninth-blog-post.jpg
 alt: ninth testimony
+tags: ["healing", "salvation"]
+
 ---
 
 # My ninth testimony

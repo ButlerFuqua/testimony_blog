@@ -1,6 +1,11 @@
 <template>
   <ul>
-    <li :key="filter" v-for="filter in filters" @click="updateFilter(filter)">
+    <li
+      :key="filter"
+      v-for="filter in filters"
+      @click="updateFilter(filter)"
+      :class="chosenFilters.includes(filter) ? 'chosen' : ''"
+    >
       {{ filter }}
     </li>
   </ul>
@@ -11,7 +16,7 @@ export default {
   name: "Filters",
   data() {
     return {
-      filters: ["healing", "salvation"],
+      filters: ["All", "healing", "salvation"],
       chosenFilters: [],
     };
   },
@@ -20,6 +25,8 @@ export default {
       const { chosenFilters, filters } = this;
       if (chosenFilters.indexOf(filter) === -1) chosenFilters.push(filter);
       else this.chosenFilters = chosenFilters.filter((fil) => fil !== filter);
+
+      if (chosenFilters.includes("All")) this.chosenFilters = [];
 
       this.$nuxt.$emit("updateFilters", this.chosenFilters);
     },
@@ -31,6 +38,10 @@ export default {
 li {
   cursor: pointer;
   &:hover {
+    text-decoration: underline;
+  }
+
+  &.chosen {
     text-decoration: underline;
   }
 }
