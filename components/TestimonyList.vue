@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li :key="idx" v-for="(testimony, idx) in testimonies">
+    <li :key="idx" v-for="(testimony, idx) in filteredTestimonies">
       {{ testimony.title }}
       <br />
       <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
@@ -14,6 +14,30 @@
 export default {
   name: "TestimonyList",
   props: ["testimonies"],
+  data() {
+    return {
+      filteredTestimonies: [],
+    };
+  },
+  methods: {
+    updateFilters(chosenFiltes) {
+      if (!chosenFiltes.length)
+        return (this.filteredTestimonies = this.testimonies);
+
+      this.filteredTestimonies = this.filteredTestimonies.filter(
+        (testimony) =>
+          testimony.tags &&
+          testimony.tags.some((tag) => chosenFiltes.includes(tag))
+      );
+    },
+  },
+  created() {
+    this.filteredTestimonies = [...this.testimonies];
+
+    this.$nuxt.$on("updateFilters", (chosenFiltes) =>
+      this.updateFilters(chosenFiltes)
+    );
+  },
 };
 </script>
 

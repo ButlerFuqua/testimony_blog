@@ -1,11 +1,13 @@
 <template>
   <div class="container" :class="show ? 'show' : ''">
     <h1>Testimonies in Christ</h1>
+    <Filters />
     <button id="closeBtn" @click="show = false">Close</button>
   </div>
 </template>
 
 <script>
+import Filters from "./Filters";
 export default {
   data() {
     return {
