@@ -27,7 +27,7 @@ export default {
       this.filteredTestimonies = this.returnFilteredTestimonies(chosenFiltes);
     },
     returnFilteredTestimonies(chosenFiltes) {
-      return this.filteredTestimonies.filter(
+      return this.testimonies.filter(
         (testimony) => testimony.tags && _hasAllFilters(testimony.tags)
       );
 

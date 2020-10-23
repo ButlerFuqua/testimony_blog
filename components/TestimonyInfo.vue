@@ -1,6 +1,8 @@
 <template>
   <div class="container" :class="show ? 'show' : ''">
-    <h1>Title Of this post</h1>
+    <div v-if="testimonyInfo">
+      <h1>{{ testimonyInfo.title }}</h1>
+    </div>
     <button id="closeBtn" @click="show = false">Close</button>
     <NuxtLink to="/">Back</NuxtLink>
   </div>
@@ -11,15 +13,21 @@ export default {
   data() {
     return {
       show: false,
+      testimonyInfo: null,
     };
   },
   created() {
     this.$nuxt.$on("openInfo", () => {
       this.show = true;
     });
+
+    this.$nuxt.$on("updateInfo", (testimony) => {
+      this.testimonyInfo = testimony;
+    });
   },
-  unmounted() {
+  beforeDestroy() {
     this.$nuxt.$off("openInfo");
+    this.$nuxt.$off("updateInfo");
   },
 };
 </script>
@@ -29,10 +37,12 @@ export default {
 .container {
   background: #ccc;
   min-width: 300px;
+  max-width: 300px;
 
   @media (max-width: 800px) {
     position: absolute;
     width: 100%;
+    max-width: 100%;
     right: 100%;
     z-index: 1;
 

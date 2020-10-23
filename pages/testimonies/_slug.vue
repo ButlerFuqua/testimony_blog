@@ -23,6 +23,9 @@ export default {
       return new Date(date).toLocaleDateString("en", options);
     },
   },
+  mounted() {
+    this.$nuxt.$emit("updateInfo", this.testimony);
+  },
 };
 </script>
 
