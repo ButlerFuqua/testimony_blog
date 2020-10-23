@@ -1,4 +1,4 @@
-# butler_fuqua_ministry
+# Testinmony Blog
 
 ## Build Setup
 
@@ -17,4 +17,6 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Content
+
+Markdown articles that share incredible testimonies from the Lord Jesus Christ.
