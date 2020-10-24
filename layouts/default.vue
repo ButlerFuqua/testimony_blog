@@ -10,7 +10,9 @@
 import Vue from "vue";
 import Navigation from "../components/Navigation";
 
-export default {};
+export default {
+  components: { Navigation },
+};
 </script>
 
 <style lang="scss" scoped>
