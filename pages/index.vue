@@ -27,7 +27,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 main {
-  height: 100%;
+  height: 100vh;
   flex-grow: 1;
+  overflow: auto;
 }
 </style>

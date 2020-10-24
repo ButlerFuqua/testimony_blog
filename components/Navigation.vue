@@ -1,6 +1,9 @@
 <template>
-  <div class="container" :class="show ? 'show' : ''">
+  <div id="sidebar" class="container" :class="show ? 'show' : ''">
     <h1>Testimonies in Christ</h1>
+    <p v-if="filteredTestimonies">
+      {{ filteredTestimonies.length }} Testimonies showing
+    </p>
     <Filters />
     <button id="closeBtn" @click="show = false">Close</button>
   </div>
@@ -12,42 +15,25 @@ export default {
   data() {
     return {
       show: false,
+      filteredTestimonies: null,
     };
   },
   created() {
     this.$nuxt.$on("openNavigation", () => {
       this.show = true;
     });
+
+    this.$nuxt.$on("sendTestimoniesToSidebar", (filteredTestimonies) => {
+      this.filteredTestimonies = filteredTestimonies;
+    });
   },
   unmounted() {
     this.$nuxt.$off("openNavigation");
+    this.$nuxt.$off("sendTestimoniesToSidebar");
   },
 };
 </script>
 
 
 <style lang="scss" scoped>
-.container {
-  background: #ccc;
-  min-width: 300px;
-
-  @media (max-width: 800px) {
-    position: absolute;
-    width: 100%;
-    right: 100%;
-    z-index: 1;
-
-    transition: 0.3s;
-
-    &.show {
-      right: 0;
-    }
-  }
-}
-
-#closeBtn {
-  @media (min-width: 801px) {
-    display: none;
-  }
-}
 </style>

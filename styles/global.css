@@ -38,3 +38,35 @@ html {
   }
 
   /* ---- */
+
+  #sidebar {
+    background: #ccc;
+    min-width: 300px;
+    max-width: 300px;
+    height: 100vh;
+    overflow: auto;
+    
+    
+  }
+  
+  #sidebar.show {
+    right: 0;
+  }
+  
+  @media (max-width: 800px) {
+    #sidebar{
+      max-width: 100%;
+      position: absolute;
+      width: 100%;
+      right: 100%;
+      z-index: 1;
+
+      transition: 0.3s;
+    }
+  }
+
+  @media (min-width: 801px) {
+    #closeBtn {
+      display: none;
+    }
+  }

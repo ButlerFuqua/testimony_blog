@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :class="show ? 'show' : ''">
+  <div id="sidebar" class="container" :class="show ? 'show' : ''">
     <div v-if="testimonyInfo">
       <h1>{{ testimonyInfo.title }}</h1>
     </div>
@@ -34,29 +34,31 @@ export default {
 
 
 <style lang="scss" scoped>
-.container {
-  background: #ccc;
-  min-width: 300px;
-  max-width: 300px;
+// .container {
+//   background: #ccc;
+//   min-width: 300px;
+//   max-width: 300px;
+//   height: 100vh;
+//   overflow: auto;
 
-  @media (max-width: 800px) {
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    right: 100%;
-    z-index: 1;
+//   @media (max-width: 800px) {
+//     position: absolute;
+//     width: 100%;
+//     max-width: 100%;
+//     right: 100%;
+//     z-index: 1;
 
-    transition: 0.3s;
+//     transition: 0.3s;
 
-    &.show {
-      right: 0;
-    }
-  }
-}
+//     &.show {
+//       right: 0;
+//     }
+//   }
+// }
 
-#closeBtn {
-  @media (min-width: 801px) {
-    display: none;
-  }
-}
+// #closeBtn {
+//   @media (min-width: 801px) {
+//     display: none;
+//   }
+// }
 </style>

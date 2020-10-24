@@ -32,5 +32,7 @@ export default {
 <style lang="scss" scoped>
 article {
   flex-grow: 1;
+  height: 100vh;
+  overflow: auto;
 }
 </style>

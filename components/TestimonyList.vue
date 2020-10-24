@@ -21,10 +21,10 @@ export default {
   },
   methods: {
     updateFilters(chosenFiltes) {
-      if (!chosenFiltes.length)
-        return (this.filteredTestimonies = this.testimonies);
-
-      this.filteredTestimonies = this.returnFilteredTestimonies(chosenFiltes);
+      if (!chosenFiltes.length) this.filteredTestimonies = this.testimonies;
+      else
+        this.filteredTestimonies = this.returnFilteredTestimonies(chosenFiltes);
+      this.sendTestimoniesToSidebar();
     },
     returnFilteredTestimonies(chosenFiltes) {
       return this.testimonies.filter(
@@ -45,6 +45,9 @@ export default {
         // return tags.some((tag) => chosenFiltes.includes(tag));
       }
     },
+    sendTestimoniesToSidebar() {
+      this.$nuxt.$emit("sendTestimoniesToSidebar", this.filteredTestimonies);
+    },
   },
   created() {
     this.filteredTestimonies = [...this.testimonies];
@@ -52,6 +55,8 @@ export default {
     this.$nuxt.$on("updateFilters", (chosenFiltes) =>
       this.updateFilters(chosenFiltes)
     );
+
+    this.sendTestimoniesToSidebar();
   },
 };
 </script>
