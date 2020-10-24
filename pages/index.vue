@@ -2,6 +2,7 @@
   <main>
     <TitleBar :title="`Title here`" :open="'Navigation'" />
     <TestimonyList :testimonies="testimonies" />
+    <!-- <Pagination /> -->
   </main>
 </template>
 
@@ -9,6 +10,7 @@
 import Vue from "vue";
 import TitleBar from "../components/TitleBar";
 import TestimonyList from "../components/TestimonyList";
+import Pagination from "../components/Pagination";
 
 export default Vue.extend({
   async asyncData({ $content, params }) {
@@ -20,7 +22,7 @@ export default Vue.extend({
       testimonies,
     };
   },
-  components: { TitleBar, TestimonyList },
+  components: { TitleBar, TestimonyList, Pagination },
 });
 </script>
 

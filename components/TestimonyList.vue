@@ -21,7 +21,8 @@ export default {
   },
   methods: {
     updateFilters(chosenFiltes) {
-      if (!chosenFiltes.length) this.filteredTestimonies = this.testimonies;
+      let testimonies = [...this.testimonies];
+      if (!chosenFiltes.length) this.filteredTestimonies = testimonies;
       else
         this.filteredTestimonies = this.returnFilteredTestimonies(chosenFiltes);
       this.sendTestimoniesToSidebar();
@@ -42,11 +43,14 @@ export default {
           }
         }
         return passes;
-        // return tags.some((tag) => chosenFiltes.includes(tag));
       }
     },
     sendTestimoniesToSidebar() {
-      this.$nuxt.$emit("sendTestimoniesToSidebar", this.filteredTestimonies);
+      this.$nuxt.$emit(
+        "sendTestimoniesToSidebar",
+        this.filteredTestimonies,
+        this.testimonies
+      );
     },
   },
   created() {

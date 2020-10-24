@@ -1,8 +1,9 @@
 <template>
   <div id="sidebar" class="container" :class="show ? 'show' : ''">
     <h1>Testimonies in Christ</h1>
-    <p v-if="filteredTestimonies">
-      {{ filteredTestimonies.length }} Testimonies showing
+    <p v-if="filteredTestimonies && testimonies">
+      {{ filteredTestimonies.length }} / {{ testimonies.length }} Testimonies
+      filtered
     </p>
     <Filters />
     <button id="closeBtn" @click="show = false">Close</button>
@@ -16,6 +17,7 @@ export default {
     return {
       show: false,
       filteredTestimonies: null,
+      testimonies: null,
     };
   },
   created() {
@@ -23,9 +25,13 @@ export default {
       this.show = true;
     });
 
-    this.$nuxt.$on("sendTestimoniesToSidebar", (filteredTestimonies) => {
-      this.filteredTestimonies = filteredTestimonies;
-    });
+    this.$nuxt.$on(
+      "sendTestimoniesToSidebar",
+      (filteredTestimonies, testimonies) => {
+        this.filteredTestimonies = filteredTestimonies;
+        this.testimonies = testimonies;
+      }
+    );
   },
   unmounted() {
     this.$nuxt.$off("openNavigation");
