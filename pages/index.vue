@@ -2,7 +2,6 @@
   <main>
     <TitleBar :title="`Title here`" :open="'Navigation'" />
     <TestimonyList :testimonies="testimonies" />
-    <!-- <Pagination /> -->
   </main>
 </template>
 
@@ -10,7 +9,7 @@
 import Vue from "vue";
 import TitleBar from "../components/TitleBar";
 import TestimonyList from "../components/TestimonyList";
-import Pagination from "../components/Pagination";
+import TestimonySearch from "../components/TestimonySearch";
 
 export default Vue.extend({
   async asyncData({ $content, params }) {
@@ -22,7 +21,7 @@ export default Vue.extend({
       testimonies,
     };
   },
-  components: { TitleBar, TestimonyList, Pagination },
+  components: { TitleBar, TestimonyList, TestimonySearch },
 });
 </script>
 
@@ -32,5 +31,6 @@ main {
   height: 100vh;
   flex-grow: 1;
   overflow: auto;
+  position: relative;
 }
 </style>

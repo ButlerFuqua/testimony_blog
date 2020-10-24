@@ -17,11 +17,13 @@ export default {
   data() {
     return {
       filteredTestimonies: [],
+      chosenFiltes: [],
     };
   },
   methods: {
     updateFilters(chosenFiltes) {
       let testimonies = [...this.testimonies];
+      this.chosenFiltes = [...chosenFiltes];
       if (!chosenFiltes.length) this.filteredTestimonies = testimonies;
       else
         this.filteredTestimonies = this.returnFilteredTestimonies(chosenFiltes);
@@ -59,8 +61,15 @@ export default {
     this.$nuxt.$on("updateFilters", (chosenFiltes) =>
       this.updateFilters(chosenFiltes)
     );
+    this.$nuxt.$on("testimonySearch", (criteria) =>
+      this.testimonySearch(criteria)
+    );
 
     this.sendTestimoniesToSidebar();
+  },
+  beforeDestroy() {
+    this.$nuxt.$off("updateFilters");
+    this.$nuxt.$off("testimonySearch");
   },
 };
 </script>
