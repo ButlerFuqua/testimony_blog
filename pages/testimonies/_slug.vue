@@ -1,13 +1,16 @@
 <template>
   <article>
     <TitleBar :title="testimony.title" :open="'Info'" />
-    <nuxt-content style="padding: 1rem" :document="testimony" />
+    <nuxt-content style="padding: 1rem; height: 100%" :document="testimony" />
     <p>Post last updated: {{ formatDate(testimony.updatedAt) }}</p>
+    <BottomBar />
   </article>
 </template>
 
 <script >
 import TitleBar from "../../components/TitleBar";
+import BottomBar from "../../components/BottomBar";
+
 export default {
   layout: "readPage",
   async asyncData({ $content, params }) {
@@ -16,7 +19,7 @@ export default {
 
     return { testimony };
   },
-  components: { TitleBar },
+  components: { TitleBar, BottomBar },
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };

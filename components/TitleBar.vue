@@ -19,8 +19,12 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  position: sticky;
+  z-index: 1;
+  top: 0;
   background: #333;
   color: white;
+  display: flex;
   @media (min-width: 801px) {
     display: none;
   }

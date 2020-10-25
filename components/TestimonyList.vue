@@ -78,6 +78,7 @@ export default {
 ul {
   margin: 0;
   padding: 1rem;
+  min-height: 100%;
 }
 
 li {

@@ -1,10 +1,24 @@
 <template>
-  <div class="container">Bottom bar</div>
+  <div class="container">
+    <div class="buttonRow">
+      <button @click="openInfo">Info</button>
+      <button>Search</button>
+      <button>Pages</button>
+      <button>Submit</button>
+      <button>Join</button>
+      <button @click="$router.push('/')">Home</button>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "BottomBar",
+  methods: {
+    openInfo() {
+      this.$nuxt.$emit(`openNavigation`);
+    },
+  },
 };
 </script>
 
@@ -15,6 +29,17 @@ export default {
   background: #fff;
   left: 0;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #777;
+}
+.buttonRow {
+  display: flex;
+
+  & button {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+    min-height: 40px;
+    cursor: pointer;
+  }
 }
 </style>

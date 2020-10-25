@@ -1,5 +1,6 @@
 <template>
   <div id="container">
+    <PageMenu />
     <Navigation />
     <Nuxt />
   </div>
@@ -9,9 +10,10 @@
 <script >
 import Vue from "vue";
 import Navigation from "../components/Navigation";
+import PageMenu from "../components/PageMenu";
 
 export default {
-  components: { Navigation },
+  components: { Navigation, PageMenu },
 };
 </script>
 
