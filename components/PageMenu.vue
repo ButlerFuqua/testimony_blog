@@ -1,11 +1,9 @@
 <template>
   <div class="container">
     <ul>
-      <li>About</li>
-      <li>Submit a Testimony</li>
-      <li>FAQ</li>
-      <li>Terms &amp; Conditions</li>
-      <li>Home</li>
+      <li @click="goToPage(page.path)" :key="page.title" v-for="page in pages">
+        {{ page.title }}
+      </li>
     </ul>
   </div>
 </template>
@@ -15,8 +13,18 @@ export default {
   name: "PageMenu",
   data() {
     return {
-      pages: [{}],
+      pages: [
+        { title: "About", path: "/about" },
+        { title: "Submit a Testimony", path: "/submit" },
+        { title: "FAQ", path: "/faq" },
+        { title: "Terms &mp; Conditions", path: "/terms" },
+      ],
     };
+  },
+  methods: {
+    goToPage(path) {
+      this.$router.push(path);
+    },
   },
 };
 </script>
@@ -43,6 +51,7 @@ export default {
       padding: 1rem;
       font-size: 1.5rem;
       font-weight: bold;
+      cursor: pointer;
     }
   }
 }
