@@ -34,7 +34,7 @@ export default {
         let testimonies = await this.getAllTestimonies();
 
         const filteredTestimonies = testimonies.filter((testimony) =>
-          testimony.title.toLowerCase().includes(this.inputValue)
+          testimony.title.toLowerCase().includes(this.inputValue.toLowerCase())
         );
 
         this.testimonies = [...filteredTestimonies];
