@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button @click="openInfo">{{ open }}</button>
+    <!-- <button @cligitck="openInfo">{{ open }}</button> -->
     <h1>{{ title }}</h1>
   </div>
 </template>

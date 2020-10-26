@@ -33,7 +33,7 @@ export default {
       }
     );
   },
-  unmounted() {
+  beforeDestroy() {
     this.$nuxt.$off("openNavigation");
     this.$nuxt.$off("sendTestimoniesToSidebar");
   },

@@ -78,3 +78,8 @@ html {
     position: relative;
   }
 
+@media(min-width: 801px){
+  .mobileOnly{
+    display: none;
+  }
+}

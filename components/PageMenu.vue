@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showPageMenu" class="container">
+  <div :class="showPageMenu ? 'showPageMenu' : ''" class="container">
     <ul>
       <li @click="goToPage(page.path)" :key="page.title" v-for="page in pages">
         {{ page.title }}
@@ -16,7 +16,8 @@ export default {
     return {
       pages: [
         { title: "About", path: "/pages/about" },
-        { title: "Submit a Testimony", path: "/pages/submit" },
+        { title: "Join", path: "/pages/submit" },
+        { title: "Submit a Testimony", path: "/pages/join" },
         { title: "FAQ", path: "/pages/faq" },
         { title: "Terms &mp; Conditions", path: "/pages/terms" },
       ],
@@ -26,6 +27,7 @@ export default {
   methods: {
     goToPage(path) {
       this.$router.push(path);
+      this.showPageMenu = false;
     },
   },
   created() {
@@ -42,13 +44,19 @@ export default {
   position: fixed;
   height: 100%;
   width: 100%;
-  left: 0;
+  left: 100%;
   top: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
   z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: 0.3s;
+
+  &.showPageMenu {
+    left: 0;
+  }
 
   ul {
     padding: 0;

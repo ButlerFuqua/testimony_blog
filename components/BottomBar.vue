@@ -1,12 +1,10 @@
 <template>
   <div class="container">
     <div class="buttonRow">
-      <button @click="openInfo">Info</button>
+      <button class="mobileOnly" @click="openInfo">Info</button>
       <button>Search</button>
-      <button @click="$nuxt.$emit('showPageMenu')">Pages</button>
-      <button>Submit</button>
-      <button>Join</button>
       <button @click="$router.push('/')">Home</button>
+      <button @click="$nuxt.$emit('showPageMenu')">Pages</button>
     </div>
   </div>
 </template>
