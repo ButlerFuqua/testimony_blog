@@ -3,7 +3,7 @@
     <TitleBar :title="testimony.title" :open="'Info'" />
     <nuxt-content style="padding: 1rem; height: 100%" :document="testimony" />
     <p>Post last updated: {{ formatDate(testimony.updatedAt) }}</p>
-    <BottomBar />
+    <BottomBar open="Info" />
   </article>
 </template>
 

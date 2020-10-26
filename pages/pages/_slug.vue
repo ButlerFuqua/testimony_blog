@@ -2,7 +2,7 @@
   <main>
     <TitleBar :title="page.title" :open="'Navigation'" />
     <nuxt-content style="padding: 1rem; height: 100%" :document="page" />
-    <BottomBar />
+    <BottomBar :open="null" />
   </main>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div id="container">
+    <SearchTestimonies />
     <PageMenu />
     <Navigation />
     <Nuxt />
@@ -10,6 +11,7 @@
 <script >
 import Vue from "vue";
 import Navigation from "../components/Navigation";
+import SearchTestimonies from "../components/SearchTestimonies";
 import PageMenu from "../components/PageMenu";
 
 export default {

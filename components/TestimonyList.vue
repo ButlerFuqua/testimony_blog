@@ -61,15 +61,11 @@ export default {
     this.$nuxt.$on("updateFilters", (chosenFiltes) =>
       this.updateFilters(chosenFiltes)
     );
-    this.$nuxt.$on("testimonySearch", (criteria) =>
-      this.testimonySearch(criteria)
-    );
 
     this.sendTestimoniesToSidebar();
   },
   beforeDestroy() {
     this.$nuxt.$off("updateFilters");
-    this.$nuxt.$off("testimonySearch");
   },
 };
 </script>

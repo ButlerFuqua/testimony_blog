@@ -2,7 +2,7 @@
   <main>
     <TitleBar :title="`Title here`" :open="'Navigation'" />
     <TestimonyList :testimonies="testimonies" />
-    <BottomBar />
+    <BottomBar :open="'Navigation'" />
   </main>
 </template>
 
@@ -10,7 +10,6 @@
 import Vue from "vue";
 import TitleBar from "../components/TitleBar";
 import TestimonyList from "../components/TestimonyList";
-import TestimonySearch from "../components/TestimonySearch";
 import BottomBar from "../components/BottomBar";
 
 export default Vue.extend({
@@ -23,7 +22,7 @@ export default Vue.extend({
       testimonies,
     };
   },
-  components: { TitleBar, TestimonyList, TestimonySearch, BottomBar },
+  components: { TitleBar, TestimonyList, BottomBar },
 });
 </script>
 
