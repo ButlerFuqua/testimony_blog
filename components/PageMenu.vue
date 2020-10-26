@@ -1,9 +1,10 @@
 <template>
-  <div class="container">
+  <div v-if="showPageMenu" class="container">
     <ul>
       <li @click="goToPage(page.path)" :key="page.title" v-for="page in pages">
         {{ page.title }}
       </li>
+      <li @click="showPageMenu = false" style="text-align: center">X</li>
     </ul>
   </div>
 </template>
@@ -14,17 +15,24 @@ export default {
   data() {
     return {
       pages: [
-        { title: "About", path: "/about" },
-        { title: "Submit a Testimony", path: "/submit" },
-        { title: "FAQ", path: "/faq" },
-        { title: "Terms &mp; Conditions", path: "/terms" },
+        { title: "About", path: "/pages/about" },
+        { title: "Submit a Testimony", path: "/pages/submit" },
+        { title: "FAQ", path: "/pages/faq" },
+        { title: "Terms &mp; Conditions", path: "/pages/terms" },
       ],
+      showPageMenu: false,
     };
   },
   methods: {
     goToPage(path) {
       this.$router.push(path);
     },
+  },
+  created() {
+    this.$nuxt.$on("showPageMenu", () => (this.showPageMenu = true));
+  },
+  beforeDestroy() {
+    this.$nuxt.$off("showPageMenu");
   },
 };
 </script>

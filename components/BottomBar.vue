@@ -3,7 +3,7 @@
     <div class="buttonRow">
       <button @click="openInfo">Info</button>
       <button>Search</button>
-      <button>Pages</button>
+      <button @click="$nuxt.$emit('showPageMenu')">Pages</button>
       <button>Submit</button>
       <button>Join</button>
       <button @click="$router.push('/')">Home</button>
