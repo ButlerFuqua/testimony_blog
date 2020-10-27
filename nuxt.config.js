@@ -34,8 +34,8 @@ export default {
       name: 'Testimonies App',
       short_name: 'testimonies',
       start_url: '/',
-      background_color: "#6dcdb1",
-      theme_color: "#009578",
+      background_color: "#ffffff",
+      theme_color: "#000000",
       display: "standalone",
       lang: 'en',
       useWebmanifestExtension: false
