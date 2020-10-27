@@ -1,3 +1,6 @@
+
+console.log('example', process.env.EXAMPLE);
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -24,12 +27,6 @@ export default {
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
   pwa: {
-    icon: {
-
-    },
-    meta: {
-      /* meta options */
-    },
     manifest: {
       name: 'Testimonies App',
       short_name: 'testimonies',
@@ -49,6 +46,7 @@ export default {
     '@nuxt/typescript-build',
   ],
 
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
@@ -57,6 +55,33 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: process.env.apiKey,
+          authDomain: process.env.authDomain,
+          databaseURL: process.env.databaseURL,
+          projectId: process.env.projectId,
+          storageBucket: process.env.storageBucket,
+          messagingSenderId: process.env.messagingSenderId,
+          appId: process.env.appId,
+          measurementId: process.env.measurementId
+        },
+        services: {
+          auth: true,
+          // firestore: true,
+          functions: true,
+          // storage: true,
+          // realtimeDb: true,
+          // messaging: true,
+          performance: true,
+          analytics: true,
+          remoteConfig: true
+        }
+      }
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
