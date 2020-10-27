@@ -16,10 +16,10 @@ export default {
     return {
       pages: [
         { title: "About", path: "/pages/about" },
-        { title: "Join", path: "/pages/submit" },
-        { title: "Submit a Testimony", path: "/pages/join" },
+        { title: "Join", path: "/pages/join" },
+        { title: "Submit a Testimony", path: "/pages/submit" },
         { title: "FAQ", path: "/pages/faq" },
-        { title: "Terms &mp; Conditions", path: "/pages/terms" },
+        { title: "Terms & Conditions", path: "/pages/terms" },
       ],
       showPageMenu: false,
     };

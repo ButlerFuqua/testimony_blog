@@ -1,6 +1,6 @@
 <template>
   <main>
-    <TitleBar :title="`Title here`" :open="'Navigation'" />
+    <TitleBar :title="`Testimonies`" :open="'Navigation'" />
     <TestimonyList :testimonies="testimonies" />
     <BottomBar :open="'Navigation'" />
   </main>

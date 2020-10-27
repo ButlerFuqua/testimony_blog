@@ -25,6 +25,12 @@ export default {
   background: #333;
   color: white;
   display: flex;
+  padding: 0.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
   @media (min-width: 801px) {
     display: none;
   }
