@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background: #fff;
   left: 0;
