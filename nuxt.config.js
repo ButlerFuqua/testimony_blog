@@ -23,10 +23,29 @@ export default {
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
+  pwa: {
+    icon: {
+
+    },
+    meta: {
+      /* meta options */
+    },
+    manifest: {
+      name: 'Testimonies App',
+      short_name: 'testimonies',
+      start_url: '/',
+      background_color: "#6dcdb1",
+      theme_color: "#009578",
+      display: "standalone",
+      lang: 'en',
+      useWebmanifestExtension: false
+    }
+  },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/typescript
+    '@nuxtjs/pwa',
     '@nuxt/typescript-build',
   ],
 
