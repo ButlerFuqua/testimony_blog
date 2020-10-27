@@ -1,19 +1,19 @@
 <template>
   <ul>
-    <li :key="idx" v-for="(testimony, idx) in filteredTestimonies">
-      {{ testimony.title }}
-      <br />
-      <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
-      <br />
-      <NuxtLink :to="`/testimonies/${testimony.slug}`">Read</NuxtLink>
-    </li>
+    <TestimonyListItem
+      :key="idx"
+      v-for="(testimony, idx) in filteredTestimonies"
+      :testimony="testimony"
+    />
   </ul>
 </template>
 
 <script>
+import TestimonyListItem from "./TestimonyListItem";
 export default {
   name: "TestimonyList",
   props: ["testimonies"],
+  components: { TestimonyListItem },
   data() {
     return {
       filteredTestimonies: [],
