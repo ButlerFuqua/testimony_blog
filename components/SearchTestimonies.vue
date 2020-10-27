@@ -28,6 +28,7 @@ export default {
   methods: {
     async emitTestimonySearch() {
       const { inputValue, validateInputValue } = this;
+
       if (validateInputValue()) {
         this.testimonies = await this.getAllTestimonies();
       } else {

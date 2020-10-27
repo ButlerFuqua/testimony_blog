@@ -1,15 +1,19 @@
 <template>
-  <ul>
-    <TestimonyListItem
-      :key="idx"
-      v-for="(testimony, idx) in filteredTestimonies"
-      :testimony="testimony"
-    />
-  </ul>
+  <div>
+    <ul>
+      <TestimonyListItem
+        :key="idx"
+        v-for="(testimony, idx) in filteredTestimonies"
+        :testimony="testimony"
+      />
+    </ul>
+    <Pagination :testimonies="filteredTestimonies" />
+  </div>
 </template>
 
 <script>
 import TestimonyListItem from "./TestimonyListItem";
+import Pagination from "./Pagination";
 export default {
   name: "TestimonyList",
   props: ["testimonies"],

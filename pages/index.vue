@@ -17,6 +17,7 @@ export default Vue.extend({
     const testimonies = await $content("testimonies", params.slug)
       .only(["title", "description", "img", "slug", "author", "tags"])
       .sortBy("createdAt", "asc")
+      // .limit(5)
       .fetch();
     return {
       testimonies,

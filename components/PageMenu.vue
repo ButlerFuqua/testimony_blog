@@ -14,13 +14,7 @@ export default {
   name: "PageMenu",
   data() {
     return {
-      pages: [
-        { title: "About", path: "/pages/about" },
-        { title: "Join", path: "/pages/join" },
-        { title: "Submit a Testimony", path: "/pages/submit" },
-        { title: "FAQ", path: "/pages/faq" },
-        { title: "Terms & Conditions", path: "/pages/terms" },
-      ],
+      pages: [],
       showPageMenu: false,
     };
   },
@@ -30,8 +24,10 @@ export default {
       this.showPageMenu = false;
     },
   },
-  created() {
+  async created() {
     this.$nuxt.$on("showPageMenu", () => (this.showPageMenu = true));
+
+    this.pages = await this.$content("pages").fetch();
   },
   beforeDestroy() {
     this.$nuxt.$off("showPageMenu");
