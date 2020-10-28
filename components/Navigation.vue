@@ -1,12 +1,9 @@
 <template>
-  <div id="sidebar" class="container" :class="show ? 'show' : ''">
-    <h1>Testimonies in Christ</h1>
+  <div id="sideFilters" :class="show ? 'show' : ''">
     <p v-if="filteredTestimonies && testimonies">
-      {{ filteredTestimonies.length }} / {{ testimonies.length }} Testimonies
-      filtered
+      {{ filteredTestimonies.length }} / {{ testimonies.length }}
     </p>
     <Filters />
-    <button id="closeBtn" @click="show = false">Close</button>
   </div>
 </template>
 
@@ -22,7 +19,7 @@ export default {
   },
   created() {
     this.$nuxt.$on("openNavigation", () => {
-      this.show = true;
+      this.show = !this.show;
     });
 
     this.$nuxt.$on(
@@ -42,4 +39,16 @@ export default {
 
 
 <style lang="scss" scoped>
+#sideFilters {
+  background: #ccc;
+  position: relative;
+  overflow: hidden;
+  width: 80px;
+  margin-left: -80px;
+  transition: 0.2s;
+
+  &.show {
+    margin-left: 0;
+  }
+}
 </style>

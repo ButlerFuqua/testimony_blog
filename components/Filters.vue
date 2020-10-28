@@ -35,7 +35,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ul {
+  padding: 0;
+  margin: 0;
+}
 li {
+  list-style-type: none;
   cursor: pointer;
   &:hover {
     text-decoration: underline;

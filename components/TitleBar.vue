@@ -22,7 +22,7 @@ export default {
   position: sticky;
   z-index: 1;
   top: 0;
-  background: #333;
+  background: #000;
   color: white;
   display: flex;
   padding: 0.5rem;

@@ -3,15 +3,15 @@
     :class="showTestinmonySearch ? 'showTestinmonySearch' : ''"
     class="container"
   >
-    <input type="text" @input="emitTestimonySearch" v-model="inputValue" />
+    <div class="inputContainer">
+      <input ref="searchInput" type="text" v-model="inputValue" />
+      <button @click="showTestinmonySearch = false">Close</button>
+    </div>
     <ul v-if="testimonies && testimonies.length">
       <li :key="testimony.title" v-for="testimony in testimonies">
         {{ testimony.title }}
       </li>
     </ul>
-    <div class="btnContainer">
-      <button @click="showTestinmonySearch = false">Close</button>
-    </div>
   </div>
 </template>
 
@@ -24,6 +24,11 @@ export default {
       inputValue: null,
       testimonies: null,
     };
+  },
+  watch: {
+    inputValue(val) {
+      this.emitTestimonySearch();
+    },
   },
   methods: {
     async emitTestimonySearch() {
@@ -67,6 +72,9 @@ export default {
 
     this.testimonies = await this.getAllTestimonies();
   },
+  mounted() {
+    this.$refs.searchInput.focus();
+  },
   beforeDestroy() {
     this.$nuxt.$off("showTestinmonySearch");
   },
@@ -93,19 +101,15 @@ export default {
     overflow: auto;
   }
 
-  .btnContainer {
+  .inputContainer {
+    margin-top: 5px;
     display: flex;
     align-content: center;
     justify-content: center;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding: 2rem;
   }
 }
 
 input {
-  margin-top: 5px;
   width: 100%;
   padding: 0.5rem;
 }

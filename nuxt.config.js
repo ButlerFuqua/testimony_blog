@@ -20,8 +20,8 @@ export default {
   components: true,
   pwa: {
     manifest: {
-      name: 'Testimonies App',
-      short_name: 'testimonies',
+      name: 'Testimonies',
+      short_name: 'Testimonies',
       start_url: '/',
       background_color: "#ffffff",
       theme_color: "#000000",
@@ -53,15 +53,7 @@ export default {
     //       measurementId: process.env.measurementId
     //     },
     //     services: {
-    //       auth: true,
-    //       // firestore: true,
-    //       functions: true,
-    //       // storage: true,
-    //       // realtimeDb: true,
-    //       // messaging: true,
-    //       performance: true,
     //       analytics: true,
-    //       remoteConfig: true
     //     }
     //   }
     // ],
