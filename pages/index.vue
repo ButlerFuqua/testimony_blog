@@ -1,7 +1,7 @@
 <template>
   <main>
     <TitleBar :title="`Testimonies`" :open="'Navigation'" />
-    <TestimonyList :testimonies="testimonies" />
+    <TestimonyList v-if="testimonies" :testimonies="testimonies" />
     <BottomBar :open="'Navigation'" />
   </main>
 </template>
@@ -13,20 +13,29 @@ import TestimonyList from "../components/TestimonyList";
 import BottomBar from "../components/BottomBar";
 
 export default Vue.extend({
-  async asyncData({ $content, params }) {
-    const testimonies = await $content("testimonies", params.slug)
-      .only(["title", "description", "img", "slug", "author", "tags"])
-      .sortBy("createdAt", "asc")
-      // .limit(5)
-      .fetch();
+  components: { TitleBar, TestimonyList, BottomBar },
+  data() {
     return {
-      testimonies,
+      testimonies: null,
     };
   },
-  components: { TitleBar, TestimonyList, BottomBar },
+  methods: {
+    async getTestimonies() {
+      this.testimonies = await this.$content(
+        "testimonies",
+        this.$route.params.slug
+      )
+        .only(["title", "description", "img", "slug", "author", "tags"])
+        .sortBy("createdAt", "asc")
+        // .limit(5)
+        .fetch();
+    },
+  },
+  async created() {
+    await this.getTestimonies();
+  },
 });
 </script>
-
 
 <style lang="scss" scoped>
 main {

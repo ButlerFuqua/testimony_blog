@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article v-if="testimony">
     <TitleBar :title="testimony.title" :open="'Info'" />
     <nuxt-content style="padding: 1rem" :document="testimony" />
     <BottomBar open="Info" />
@@ -12,20 +12,32 @@ import BottomBar from "../../components/BottomBar";
 
 export default {
   layout: "readPage",
-  async asyncData({ $content, params }) {
-    const testimony = await $content("testimonies", params.slug).fetch();
-
-    return { testimony };
-  },
   components: { TitleBar, BottomBar },
+  data() {
+    return {
+      testimony: null,
+    };
+  },
   methods: {
+    async getTestimony() {
+      this.testimony = await this.$content(
+        "testimonies",
+        this.$route.params.slug
+      ).fetch();
+    },
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
     },
   },
+  async created() {
+    await this.getTestimony();
+  },
   mounted() {
     this.$nuxt.$emit("updateInfo", this.testimony);
+  },
+  beforeDestroy() {
+    this.$nuxt.$off("updateInfo");
   },
 };
 </script>
