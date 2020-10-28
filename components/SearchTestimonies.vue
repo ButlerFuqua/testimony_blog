@@ -65,15 +65,12 @@ export default {
     },
   },
   async created() {
-    this.$nuxt.$on(
-      "showTestinmonySearch",
-      () => (this.showTestinmonySearch = true)
-    );
+    this.$nuxt.$on("showTestinmonySearch", () => {
+      this.showTestinmonySearch = true;
+      this.$refs.searchInput.focus();
+    });
 
     this.testimonies = await this.getAllTestimonies();
-  },
-  mounted() {
-    this.$refs.searchInput.focus();
   },
   beforeDestroy() {
     this.$nuxt.$off("showTestinmonySearch");
