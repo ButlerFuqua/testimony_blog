@@ -32,7 +32,7 @@ export default {
   }
 
   @media (min-width: 801px) {
-    display: none;
+    // display: none;
   }
 }
 </style>
