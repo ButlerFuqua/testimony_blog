@@ -28,6 +28,9 @@ export default {
       display: "standalone",
       lang: 'en',
       useWebmanifestExtension: false
+    },
+    workbox: {
+      cleanupOutdatedCaches: true
     }
   },
   buildModules: [
