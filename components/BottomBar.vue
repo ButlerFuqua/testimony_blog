@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="buttonRow">
-      <button v-if="open" class="mobileOnly" @click="openInfo">Info</button>
+      <button v-if="open" @click="openInfo">Info</button>
       <button @click="$nuxt.$emit('showTestinmonySearch')">Search</button>
       <button @click="$router.push('/')">Home</button>
       <button @click="$nuxt.$emit('showPageMenu')">Pages</button>

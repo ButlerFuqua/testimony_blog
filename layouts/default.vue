@@ -15,7 +15,7 @@ import SearchTestimonies from "../components/SearchTestimonies";
 import PageMenu from "../components/PageMenu";
 
 export default {
-  components: { Navigation, PageMenu },
+  components: { SearchTestimonies, Navigation, PageMenu },
 };
 </script>
 

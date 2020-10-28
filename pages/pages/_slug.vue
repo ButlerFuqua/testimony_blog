@@ -12,6 +12,7 @@ import TitleBar from "../../components/TitleBar";
 import BottomBar from "../../components/BottomBar";
 
 export default Vue.extend({
+  layout: "pageLayout",
   data() {
     return {
       page: null,

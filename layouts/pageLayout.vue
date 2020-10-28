@@ -9,11 +9,11 @@
 
 <script >
 import Vue from "vue";
-import PageMenu from "../components/PageMenu";
 import SearchTestimonies from "../components/SearchTestimonies";
+import PageMenu from "../components/PageMenu";
 
 export default {
-  components: { PageMenu, SearchTestimonies },
+  components: { SearchTestimonies, PageMenu },
 };
 </script>
 

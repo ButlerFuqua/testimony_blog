@@ -2,7 +2,7 @@
   <article v-if="testimony">
     <TitleBar :title="testimony.title" :open="'Info'" />
     <nuxt-content style="padding: 1rem" :document="testimony" />
-    <BottomBar open="Info" />
+    <BottomBar :open="null" />
   </article>
 </template>
 
