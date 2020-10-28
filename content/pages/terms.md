@@ -1,9 +1,9 @@
 ---
-title: Terms and Condistions
-description: This is the Terms and Condistions page
+title: Terms and Conditions
+description: This is the Terms and Conditions page
 path: /terms
 ---
 
-# Terms and Condistions this Site
+# Terms and Conditions this Site
 
-This is the Terms and Condistions page.
+This is the Terms and Conditions page.
