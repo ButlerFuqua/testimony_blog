@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="testimonyListContainer">
     <ul>
       <TestimonyListItem
         :key="idx"
@@ -75,6 +75,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#testimonyListContainer {
+  margin-bottom: 5rem;
+}
 ul {
   margin: 0;
   padding: 1rem;

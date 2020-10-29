@@ -17,6 +17,7 @@ export default Vue.extend({
   data() {
     return {
       testimonies: null,
+      testimoniesPerLoad: 3,
     };
   },
   methods: {
@@ -27,12 +28,27 @@ export default Vue.extend({
       )
         .only(["title", "description", "img", "slug", "author", "tags"])
         .sortBy("createdAt", "asc")
-        // .limit(5)
+        .limit(this.testimoniesPerLoad)
         .fetch();
+    },
+    async loadMoreTestimoines() {
+      let moreTestimoines = await this.$content(
+        "testimonies",
+        this.$route.params.slug
+      )
+        .only(["title", "description", "img", "slug", "author", "tags"])
+        .sortBy("createdAt", "asc")
+        .skip(this.testimonies.length)
+        .limit(this.testimoniesPerLoad)
+        .fetch();
+
+      this.testimonies = [...this.testimonies, moreTestimoines];
     },
   },
   async created() {
     await this.getTestimonies();
+
+    this.$nuxt.$on("loadMoreTestimonies", () => this.loadMoreTestimoines());
   },
 });
 </script>

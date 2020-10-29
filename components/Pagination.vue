@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <button>Previous</button>
-    <button>1</button>
-    <button>Next</button>
+    <button @click="$nuxt.$emit('loadMoreTestimonies')">Load More</button>
   </div>
 </template>
 
@@ -21,5 +19,6 @@ export default {
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 </style>
