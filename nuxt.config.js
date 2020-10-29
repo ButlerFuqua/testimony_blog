@@ -31,7 +31,7 @@ export default {
     },
     workbox: {
       cleanupOutdatedCaches: true,
-      cacheAssets: true
+      // cacheAssets: true
     }
   },
   buildModules: [
