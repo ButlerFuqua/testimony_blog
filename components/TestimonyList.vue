@@ -24,6 +24,11 @@ export default {
       chosenFiltes: [],
     };
   },
+  watch: {
+    testimonies(val) {
+      this.updateFilters(this.chosenFiltes);
+    },
+  },
   methods: {
     updateFilters(chosenFiltes) {
       let testimonies = [...this.testimonies];

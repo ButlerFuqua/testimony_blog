@@ -42,7 +42,7 @@ export default Vue.extend({
         .limit(this.testimoniesPerLoad)
         .fetch();
 
-      this.testimonies = [...this.testimonies, moreTestimoines];
+      this.testimonies = [...this.testimonies, ...moreTestimoines];
     },
   },
   async created() {

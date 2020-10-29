@@ -41,11 +41,13 @@ export default {
     },
   },
   created() {
-    this.lastScrollTop = window.pageYOffset;
-    window.addEventListener("scroll", this.handleScroll);
+    if (process.client) {
+      this.lastScrollTop = window.pageYOffset;
+      window.addEventListener("scroll", this.handleScroll);
+    }
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
+    if (process.client) window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
