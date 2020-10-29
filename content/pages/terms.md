@@ -8,4 +8,4 @@ path: /terms
 
 This is the Terms and Conditions page.
 
-It's a really important page.
+It's a VERY important page.

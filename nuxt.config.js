@@ -30,6 +30,8 @@ export default {
       useWebmanifestExtension: false
     },
     workbox: {
+      cleanupOutdatedCaches: true,
+      cacheAssets: true
     }
   },
   buildModules: [
