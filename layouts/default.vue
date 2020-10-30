@@ -4,6 +4,7 @@
     <PageMenu />
     <Navigation />
     <Nuxt />
+    <BottomBar :open="'Navigation'" />
   </div>
 </template>
 
@@ -13,9 +14,10 @@ import Vue from "vue";
 import Navigation from "../components/Navigation";
 import SearchTestimonies from "../components/SearchTestimonies";
 import PageMenu from "../components/PageMenu";
+import BottomBar from "../components/BottomBar";
 
 export default {
-  components: { SearchTestimonies, Navigation, PageMenu },
+  components: { SearchTestimonies, Navigation, PageMenu, BottomBar },
 };
 </script>
 

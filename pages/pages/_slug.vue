@@ -2,14 +2,12 @@
   <main v-if="page">
     <TitleBar :title="page.title" :open="'Navigation'" />
     <nuxt-content style="padding: 1rem; height: 100%" :document="page" />
-    <BottomBar :open="null" />
   </main>
 </template>
 
 <script>
 import Vue from "vue";
 import TitleBar from "../../components/TitleBar";
-import BottomBar from "../../components/BottomBar";
 
 export default Vue.extend({
   layout: "pageLayout",
@@ -26,7 +24,7 @@ export default Vue.extend({
   async created() {
     await this.getPage();
   },
-  components: { TitleBar, BottomBar },
+  components: { TitleBar },
 });
 </script>
 

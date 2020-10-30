@@ -2,7 +2,6 @@
   <main>
     <TitleBar :title="`Testimonies`" :open="'Navigation'" />
     <TestimonyList v-if="testimonies" :testimonies="testimonies" />
-    <BottomBar :open="'Navigation'" />
   </main>
 </template>
 
@@ -10,10 +9,9 @@
 import Vue from "vue";
 import TitleBar from "../components/TitleBar";
 import TestimonyList from "../components/TestimonyList";
-import BottomBar from "../components/BottomBar";
 
 export default Vue.extend({
-  components: { TitleBar, TestimonyList, BottomBar },
+  components: { TitleBar, TestimonyList },
   data() {
     return {
       testimonies: null,
