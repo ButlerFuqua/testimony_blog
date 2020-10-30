@@ -47,11 +47,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 
   transition: 0.3s;
 
   &.showPageMenu {
     left: 0;
+    opacity: 1;
   }
 
   ul {

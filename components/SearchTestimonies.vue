@@ -87,10 +87,12 @@ export default {
   top: 100%;
   background: rgba(255, 255, 255, 1);
   z-index: 3;
-  transition: 0.3s;
+  opacity: 0;
+  transition: 0.5s;
 
   &.showTestinmonySearch {
     top: 0;
+    opacity: 1;
   }
 
   ul {
