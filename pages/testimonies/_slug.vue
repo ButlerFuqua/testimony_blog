@@ -2,17 +2,15 @@
   <article v-if="testimony">
     <TitleBar :title="testimony.title" :open="'Info'" />
     <nuxt-content style="padding: 1rem" :document="testimony" />
-    <BottomBar :open="null" />
   </article>
 </template>
 
 <script >
 import TitleBar from "../../components/TitleBar";
-import BottomBar from "../../components/BottomBar";
 
 export default {
   layout: "readPage",
-  components: { TitleBar, BottomBar },
+  components: { TitleBar },
   data() {
     return {
       testimony: null,

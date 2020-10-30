@@ -3,6 +3,7 @@
     <SearchTestimonies />
     <PageMenu />
     <Nuxt />
+    <BottomBar :open="null" />
   </div>
 </template>
 
@@ -11,9 +12,10 @@
 import Vue from "vue";
 import PageMenu from "../components/PageMenu";
 import SearchTestimonies from "../components/SearchTestimonies";
+import BottomBar from "../components/BottomBar";
 
 export default {
-  components: { PageMenu, SearchTestimonies },
+  components: { PageMenu, SearchTestimonies, BottomBar },
 };
 </script>
 
