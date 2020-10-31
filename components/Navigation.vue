@@ -1,6 +1,7 @@
 <template>
   <div id="sideFilters" :class="show ? 'show' : ''">
     <div class="testimoniesLengthContainer">
+      <img src="app-icons/default_icon.svg" />
       <p v-if="filteredTestimonies && testimonies">
         {{ filteredTestimonies.length }} / {{ testimonies.length }}
       </p>
@@ -62,5 +63,9 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+img {
+  max-width: 100%;
+  width: 2.5rem;
 }
 </style>

@@ -69,6 +69,7 @@ li {
   justify-content: center;
 
   img {
+    max-width: 100%;
     width: 2.5rem;
   }
 
