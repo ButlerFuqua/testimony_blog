@@ -6,6 +6,7 @@
       @click="updateFilter(filter)"
       :class="chosenFilters.includes(filter) ? 'chosen' : ''"
     >
+      <img src="app-icons/default_icon.svg" />
       {{ filter }}
     </li>
   </ul>
@@ -35,6 +36,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  max-width: 100%;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -42,12 +47,22 @@ ul {
 li {
   list-style-type: none;
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
+  width: 100%;
+  background: #fcfcfc;
+  border: 1px solid #eee;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 2.5rem;
   }
 
   &.chosen {
-    text-decoration: underline;
+    border-color: #ddd;
+    font-weight: bold;
   }
 }
 </style>

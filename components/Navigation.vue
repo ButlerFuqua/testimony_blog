@@ -1,8 +1,10 @@
 <template>
   <div id="sideFilters" :class="show ? 'show' : ''">
-    <p v-if="filteredTestimonies && testimonies">
-      {{ filteredTestimonies.length }} / {{ testimonies.length }}
-    </p>
+    <div class="testimoniesLengthContainer">
+      <p v-if="filteredTestimonies && testimonies">
+        {{ filteredTestimonies.length }} / {{ testimonies.length }}
+      </p>
+    </div>
     <Filters />
   </div>
 </template>
@@ -40,7 +42,9 @@ export default {
 
 <style lang="scss" scoped>
 #sideFilters {
-  background: #ccc;
+  background: #fcfcfc;
+  border-right: 1px solid #eee;
+
   position: relative;
   overflow: hidden;
   width: 80px;
@@ -50,5 +54,13 @@ export default {
   &.show {
     margin-left: 0;
   }
+}
+
+.testimoniesLengthContainer {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
