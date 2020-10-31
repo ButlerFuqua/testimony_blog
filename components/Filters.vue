@@ -50,10 +50,11 @@ img {
 }
 
 ul {
-  height: 99vh;
+  height: calc(99vh - 80px);
   overflow: auto;
   padding: 0;
   margin: 0;
+  padding-bottom: 5rem;
 }
 li {
   list-style-type: none;
