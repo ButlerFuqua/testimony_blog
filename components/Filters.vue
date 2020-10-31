@@ -17,7 +17,16 @@ export default {
   name: "Filters",
   data() {
     return {
-      filters: ["All", "healing", "salvation"],
+      filters: [
+        "All",
+        "healing",
+        "salvation",
+        "win",
+        "best",
+        "other",
+        "army",
+        "Yes",
+      ],
       chosenFilters: [],
     };
   },
@@ -41,6 +50,8 @@ img {
 }
 
 ul {
+  height: 99vh;
+  overflow: auto;
   padding: 0;
   margin: 0;
 }
