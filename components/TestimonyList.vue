@@ -7,7 +7,7 @@
         :testimony="testimony"
       />
     </ul>
-    <Pagination :testimonies="filteredTestimonies" />
+    <Pagination />
   </div>
 </template>
 
