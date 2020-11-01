@@ -88,12 +88,4 @@ ul {
   padding: 1rem;
   min-height: 100%;
 }
-
-li {
-  list-style: none;
-  min-width: 30%;
-  margin: 1rem auto;
-  padding: 1rem;
-  border: 1px solid;
-}
 </style>

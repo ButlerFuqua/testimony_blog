@@ -5,10 +5,11 @@
     :class="hideOnScroll ? 'hideOnScroll' : ''"
   >
     <div class="buttonRow">
-      <button v-if="open" @click="openInfo">Info</button>
-      <button @click="$nuxt.$emit('showTestinmonySearch')">Search</button>
-      <button @click="$router.push('/')">Home</button>
-      <button @click="$nuxt.$emit('showPageMenu')">Pages</button>
+      <template v-for="btn in buttons">
+        <button @click="btn.action" v-if="btn.condition" :key="btn.label">
+          {{ btn.label }}
+        </button>
+      </template>
     </div>
   </div>
 </template>
@@ -21,6 +22,28 @@ export default {
     return {
       hideOnScroll: false,
       lastScrollTop: 0,
+      buttons: [
+        {
+          label: "Filters",
+          condition: this.open,
+          action: this.openInfo,
+        },
+        {
+          label: "Search",
+          condition: true,
+          action: () => this.$nuxt.$emit("showTestinmonySearch"),
+        },
+        {
+          label: "Home",
+          condition: true,
+          action: () => this.$router.push("/"),
+        },
+        {
+          label: "Pages",
+          condition: true,
+          action: () => this.$nuxt.$emit("showPageMenu"),
+        },
+      ],
     };
   },
   methods: {
