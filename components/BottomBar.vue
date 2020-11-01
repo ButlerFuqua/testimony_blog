@@ -7,7 +7,7 @@
     <div class="buttonRow">
       <template v-for="btn in buttons">
         <button @click="btn.action" v-if="btn.condition" :key="btn.label">
-          <img :src="`app-icons/${btn.icon}`" />
+          <img :src="`../app-icons/${btn.icon}`" />
           {{ btn.label }}
         </button>
       </template>

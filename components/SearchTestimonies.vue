@@ -10,7 +10,7 @@
     <ul v-if="testimonies && testimonies.length">
       <li :key="testimony.title" v-for="testimony in testimonies">
         <p>
-          <img src="app-icons/default_icon.svg" />
+          <img :src="`../app-icons/default_icon.svg`" />
           {{ testimony.title }}
         </p>
         <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
