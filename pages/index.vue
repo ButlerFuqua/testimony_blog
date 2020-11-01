@@ -15,7 +15,7 @@ export default Vue.extend({
   data() {
     return {
       testimonies: null,
-      testimoniesPerLoad: 1,
+      testimoniesPerLoad: 10,
     };
   },
   methods: {

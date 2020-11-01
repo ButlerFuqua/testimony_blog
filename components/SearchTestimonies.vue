@@ -26,7 +26,7 @@ export default {
   components: { CTALink },
   data() {
     return {
-      showTestinmonySearch: true,
+      showTestinmonySearch: false,
       inputValue: null,
       testimonies: null,
     };
