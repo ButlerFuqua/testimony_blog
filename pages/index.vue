@@ -15,7 +15,7 @@ export default Vue.extend({
   data() {
     return {
       testimonies: null,
-      testimoniesPerLoad: 10,
+      testimoniesPerLoad: 1,
     };
   },
   methods: {
@@ -54,8 +54,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 main {
   height: 100vh;
-  // flex-grow: 1;
+  flex-grow: 1;
   overflow: auto;
   position: relative;
+  background: #eee;
 }
 </style>

@@ -7,6 +7,7 @@
     <div class="buttonRow">
       <template v-for="btn in buttons">
         <button @click="btn.action" v-if="btn.condition" :key="btn.label">
+          <img :src="`app-icons/${btn.icon}`" />
           {{ btn.label }}
         </button>
       </template>
@@ -27,21 +28,25 @@ export default {
           label: "Filters",
           condition: this.open,
           action: this.openInfo,
+          icon: "default_icon.svg",
         },
         {
           label: "Search",
           condition: true,
           action: () => this.$nuxt.$emit("showTestinmonySearch"),
+          icon: "default_icon.svg",
         },
         {
           label: "Home",
           condition: true,
           action: () => this.$router.push("/"),
+          icon: "default_icon.svg",
         },
         {
           label: "Pages",
           condition: true,
           action: () => this.$nuxt.$emit("showPageMenu"),
+          icon: "default_icon.svg",
         },
       ],
     };
@@ -82,23 +87,34 @@ export default {
   background: #fff;
   left: 0;
   width: 100%;
-  border: 1px solid #777;
 
   transition: 0.3s;
 
   &.hideOnScroll {
-    bottom: -45px;
+    bottom: -65px;
   }
 }
 .buttonRow {
   display: flex;
 
   & button {
+    background: #fff;
     border-radius: 0;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
+    // border: none;
     flex-grow: 1;
-    height: 40px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    max-height: 65px;
+
+    img {
+      max-width: 100%;
+      width: 25px;
+    }
   }
 }
 </style>

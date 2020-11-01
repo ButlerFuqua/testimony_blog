@@ -9,18 +9,24 @@
     </div>
     <ul v-if="testimonies && testimonies.length">
       <li :key="testimony.title" v-for="testimony in testimonies">
-        {{ testimony.title }}
+        <p>
+          <img src="app-icons/default_icon.svg" />
+          {{ testimony.title }}
+        </p>
+        <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
       </li>
     </ul>
   </div>
 </template>
 
 <script>
+import CTALink from "./CTALink";
 export default {
   name: "SearchTestimony",
+  components: { CTALink },
   data() {
     return {
-      showTestinmonySearch: false,
+      showTestinmonySearch: true,
       inputValue: null,
       testimonies: null,
     };
@@ -98,6 +104,25 @@ export default {
   ul {
     height: 100%;
     overflow: auto;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6rem;
+
+    li {
+      list-style: none;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        display: flex;
+        align-items: center;
+        img {
+          width: 20px;
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 
   .inputContainer {

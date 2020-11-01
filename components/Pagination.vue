@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <button @click="$nuxt.$emit('loadMoreTestimonies')">Load More</button>
+    <FlatButton
+      :action="() => $nuxt.$emit('loadMoreTestimonies')"
+      label="Load Moare"
+    />
   </div>
 </template>
 
 <script>
+import FlatButton from "./FlatButton";
 export default {
   name: "Pagination",
-  data() {
-    return {
-      testimoniesPerPage: 5,
-    };
-  },
+  components: { FlatButton },
 };
 </script>
 
