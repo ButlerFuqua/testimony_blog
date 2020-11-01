@@ -48,7 +48,7 @@ export default {
 
   position: relative;
   overflow: hidden;
-  width: 80px;
+  min-width: 80px;
   margin-left: -80px;
   transition: 0.2s;
 
