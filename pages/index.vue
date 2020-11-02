@@ -34,8 +34,8 @@ export default Vue.extend({
         "testimonies",
         this.$route.params.slug
       )
-        .only(["title", "description", "img", "slug", "author", "tags"])
-        .sortBy("createdAt", "asc")
+        .only(["title", "description", "img", "slug", "author", "tags", "date"])
+        .sortBy("date", "asc")
         .skip(this.testimonies.length)
         .limit(this.testimoniesPerLoad)
         .fetch();
