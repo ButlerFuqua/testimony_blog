@@ -3,6 +3,9 @@ title: This is my fourth testimony
 description: Learning how to use @nuxt/content to create a blog
 img: fourth-blog-post.jpg
 alt: fourth testimony
+published: 10/21/2020
+occured: 02/03/1990
+postNumber: 4
 ---
 
 # My fourth testimony

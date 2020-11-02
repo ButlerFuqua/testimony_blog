@@ -17,5 +17,6 @@ a {
   padding: 5px 15px;
   border-radius: 1rem;
   box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
 }
 </style>

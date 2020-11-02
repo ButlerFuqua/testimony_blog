@@ -3,6 +3,9 @@ title: This is my twelth testimony
 description: Learning how to use @nuxt/content to create a blog
 img: twelth-blog-post.jpg
 alt: twelth testimony
+published: 11/01/2020
+occured: 02/01/1990
+postNumber: 12
 ---
 
 # My twelth testimony

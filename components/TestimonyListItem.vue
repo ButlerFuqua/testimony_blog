@@ -4,12 +4,18 @@
       <img src="app-icons/default_icon.svg" />
       {{ testimony.title }}
     </h3>
+    <small
+      >Published: {{ testimony.published || "Unkown" }} | Occured:
+      {{ testimony.occured || "Unknown" }}</small
+    >
     <p>{{ testimony.description }}</p>
     <div class="tags">
       <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
     </div>
     <br />
-    <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
+    <div class="readBtnContainer">
+      <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
+    </div>
   </li>
 </template>
 
@@ -45,6 +51,11 @@ li {
   border-radius: 5px;
 }
 
+small {
+  display: block;
+  margin: 1rem 0;
+}
+
 .tags {
   span {
     padding: 0.1rem 0.5rem;
@@ -57,5 +68,10 @@ li {
   span + span {
     margin-left: 0.5rem;
   }
+}
+
+.readBtnContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>

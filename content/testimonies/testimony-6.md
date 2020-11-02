@@ -3,6 +3,9 @@ title: My first Blog Post
 description: Learning how to use @nuxt/content to create a blog
 img: first-blog-post.jpg
 alt: my first blog post
+published: 10/23/2020
+occured: 02/03/1990
+postNumber: 6
 ---
 
 # My first article
