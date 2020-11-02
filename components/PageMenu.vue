@@ -27,7 +27,9 @@ export default {
   async created() {
     this.$nuxt.$on("showPageMenu", () => (this.showPageMenu = true));
 
-    this.pages = await this.$content("pages").fetch();
+    this.pages = await this.$content("pages")
+      .sortBy("pageOrder", "asc")
+      .fetch();
   },
   beforeDestroy() {
     this.$nuxt.$off("showPageMenu");
