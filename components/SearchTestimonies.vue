@@ -94,7 +94,7 @@ export default {
   background: rgba(255, 255, 255, 1);
   z-index: 3;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 
   &.showTestinmonySearch {
     top: 0;
@@ -136,6 +136,15 @@ export default {
 input {
   width: 100%;
   padding: 0.5rem;
+  border-radius: 0;
+  border: 1px solid #333;
+}
+
+button {
+  border-radius: 0;
+  border: none;
+  background: #333;
+  color: #fff;
 }
 
 .flex {

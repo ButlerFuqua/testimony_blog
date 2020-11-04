@@ -1,10 +1,12 @@
 <template>
   <div :class="showPageMenu ? 'showPageMenu' : ''" class="container">
+    <button @click="showPageMenu = false" style="text-align: center">
+      <img src="/app-icons/close_icon.svg" alt="close" />
+    </button>
     <ul>
       <li @click="goToPage(page.path)" :key="page.title" v-for="page in pages">
         {{ page.title }}
       </li>
-      <li @click="showPageMenu = false" style="text-align: center">X</li>
     </ul>
   </div>
 </template>
@@ -69,6 +71,17 @@ export default {
       font-weight: bold;
       cursor: pointer;
     }
+  }
+
+  button {
+    position: absolute;
+    bottom: 1rem;
+    background: none;
+    border: none;
+  }
+
+  img {
+    width: 30px;
   }
 }
 </style>
