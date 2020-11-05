@@ -11,30 +11,27 @@ import TitleBar from "../components/TitleBar";
 import TestimonyList from "../components/TestimonyList";
 
 export default Vue.extend({
+  async asyncData({ $content, params }) {
+    const testimonies = await $content("testimonies", params.slug)
+      .sortBy("postNumber", "asc")
+      .limit(10)
+      .fetch();
+    return {
+      testimonies,
+    };
+  },
   components: { TitleBar, TestimonyList },
   data() {
     return {
-      testimonies: null,
       testimoniesPerLoad: 10,
     };
   },
   methods: {
-    async getTestimonies() {
-      this.testimonies = await this.$content(
-        "testimonies",
-        this.$route.params.slug
-      )
-        // .only(["title", "description", "img", "slug", "author", "tags"])
-        .sortBy("postNumber", "asc")
-        .limit(this.testimoniesPerLoad)
-        .fetch();
-    },
     async loadMoreTestimoines() {
       let moreTestimoines = await this.$content(
         "testimonies",
         this.$route.params.slug
       )
-        // .only(["title", "description", "img", "slug", "author", "tags", "date"])
         .sortBy("postNumber", "asc")
         .skip(this.testimonies.length)
         .limit(this.testimoniesPerLoad)
@@ -43,9 +40,7 @@ export default Vue.extend({
       this.testimonies = [...this.testimonies, ...moreTestimoines];
     },
   },
-  async created() {
-    await this.getTestimonies();
-
+  created() {
     this.$nuxt.$on("loadMoreTestimonies", () => this.loadMoreTestimoines());
   },
 });
