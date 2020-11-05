@@ -7,7 +7,7 @@
     <div class="buttonRow">
       <template v-for="btn in buttons">
         <button @click="btn.action" v-if="btn.condition" :key="btn.label">
-          <img :src="`../app-icons/${btn.icon}`" />
+          <img :src="`../app-icons/${btn.label.toLowerCase()}_icon.svg`" />
           {{ btn.label }}
         </button>
       </template>
@@ -107,6 +107,7 @@ export default {
     img {
       max-width: 100%;
       width: 25px;
+      margin-bottom: 3px;
     }
   }
 }

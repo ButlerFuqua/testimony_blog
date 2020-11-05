@@ -20,7 +20,15 @@ export default {
   name: "Filters",
   data() {
     return {
-      filters: ["All", "Miracle", "Salvation", "Healing", "Everyday", "Other"],
+      filters: [
+        "All",
+        "Miracle",
+        "Sexual",
+        "Salvation",
+        "Healing",
+        "Everyday",
+        "Other",
+      ],
       chosenFilters: [],
     };
   },
