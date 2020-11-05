@@ -31,6 +31,7 @@ export default {
   },
   methods: {
     updateFilters(chosenFiltes) {
+      chosenFiltes = chosenFiltes.map((filter) => filter.toLowerCase());
       let testimonies = [...this.testimonies];
       this.chosenFiltes = [...chosenFiltes];
       if (!chosenFiltes.length) this.filteredTestimonies = testimonies;

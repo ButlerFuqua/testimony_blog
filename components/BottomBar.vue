@@ -68,15 +68,8 @@ export default {
       this.lastScrollTop = windowScrollTop;
     },
   },
-  created() {
-    if (process.client) {
-      this.lastScrollTop = window.pageYOffset;
-      window.addEventListener("scroll", this.handleScroll);
-    }
-  },
-  beforeDestroy() {
-    if (process.client) window.removeEventListener("scroll", this.handleScroll);
-  },
+  created() {},
+  beforeDestroy() {},
 };
 </script>
 

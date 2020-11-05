@@ -10,7 +10,10 @@
     >
     <p>{{ testimony.description }}</p>
     <div class="tags">
-      <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
+      <!-- <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span> -->
+      <div :key="tag" v-for="tag in testimony.tags">
+        <img :src="`app-icons/${tag}_icon.svg`" :alt="`${tag} icon`" />
+      </div>
     </div>
     <br />
     <div class="readBtnContainer">
@@ -33,14 +36,17 @@ h3,
 p {
   margin-bottom: 1rem;
 }
+img {
+  max-width: 100%;
+}
 h3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
   img {
-    width: 1.5rem;
-    margin-right: 1rem;
+    width: 30px;
+    margin-right: 10px;
   }
 }
 li {
@@ -57,16 +63,38 @@ small {
 }
 
 .tags {
-  span {
-    padding: 0.1rem 0.5rem;
-    border: 1px solid #f0c002;
-    background: #f0c002;
-    border-radius: 2rem;
+  display: flex;
+  // span {
+  //   padding: 0.1rem 0.5rem;
+  //   border: 1px solid #f0c002;
+  //   background: #f0c002;
+  //   border-radius: 2rem;
+  //   margin: 0.5rem 0;
+  //   font-size: 0.8rem;
+  // }
+  // span + span,
+  // img + img {
+  //   margin-left: 0.5rem;
+  // }
+
+  div {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2aa1d4;
+    border-radius: 45px;
     margin: 0.5rem 0;
-    font-size: 0.8rem;
   }
-  span + span {
+  div + div {
     margin-left: 0.5rem;
+  }
+
+  img {
+    width: 30px;
+    max-height: 30px;
+    padding: 1px;
   }
 }
 

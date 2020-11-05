@@ -6,7 +6,10 @@
       @click="updateFilter(filter)"
       :class="chosenFilters.includes(filter) ? 'chosen' : ''"
     >
-      <img src="app-icons/default_icon.svg" />
+      <img
+        :src="`app-icons/${filter.toLowerCase()}_icon.svg`"
+        :alt="`${filter} icon`"
+      />
       {{ filter }}
     </li>
   </ul>
@@ -61,7 +64,8 @@ li {
 
   img {
     max-width: 100%;
-    width: 2.5rem;
+    width: 30px;
+    max-height: 30px;
   }
 
   &.chosen {
