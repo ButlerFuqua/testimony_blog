@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <!-- <button @cligitck="openInfo">{{ open }}</button> -->
-    <h1>{{ title }}</h1>
+    <div>
+      <h1>{{ title }}</h1>
+    </div>
   </div>
 </template>
 
@@ -26,6 +28,12 @@ export default {
   color: white;
   display: flex;
   padding: 0.5rem;
+
+  div {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+  }
 
   h1 {
     font-size: 1.5rem;

@@ -1,7 +1,9 @@
 <template>
   <main v-if="page">
     <TitleBar :title="page.title" :open="'Navigation'" />
-    <nuxt-content style="padding: 1rem; height: 100%" :document="page" />
+    <div id="contentContainer">
+      <nuxt-content style="padding: 1rem; height: 100%" :document="page" />
+    </div>
   </main>
 </template>
 
@@ -30,4 +32,13 @@ export default Vue.extend({
 
 
 <style lang="scss" scoped>
+#contentContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+
+  * {
+    max-width: 100%;
+  }
+}
 </style>

@@ -88,5 +88,8 @@ ul {
   margin: 0;
   padding: 1rem;
   min-height: 100%;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
 </style>

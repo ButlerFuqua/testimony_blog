@@ -1,7 +1,9 @@
 <template>
   <article v-if="testimony">
     <TitleBar :title="testimony.title" :open="'Info'" />
-    <nuxt-content style="padding: 1rem" :document="testimony" />
+    <div id="contentContainer">
+      <nuxt-content style="padding: 1rem" :document="testimony" />
+    </div>
   </article>
 </template>
 
@@ -46,5 +48,15 @@ article {
   height: 100%;
   overflow: auto;
   margin-bottom: 3rem;
+
+  #contentContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+
+    * {
+      max-width: 100%;
+    }
+  }
 }
 </style>

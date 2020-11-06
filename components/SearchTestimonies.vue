@@ -3,19 +3,21 @@
     :class="showTestinmonySearch ? 'showTestinmonySearch' : ''"
     class="container"
   >
-    <div class="inputContainer">
-      <input ref="searchInput" type="text" v-model="inputValue" />
-      <button @click="showTestinmonySearch = false">Close</button>
+    <div id="searchContainer">
+      <div class="inputContainer">
+        <input ref="searchInput" type="text" v-model="inputValue" />
+        <button @click="showTestinmonySearch = false">Close</button>
+      </div>
+      <ul v-if="testimonies && testimonies.length">
+        <li :key="testimony.title" v-for="testimony in testimonies">
+          <p>
+            <img :src="`../app-icons/default_icon.svg`" />
+            {{ testimony.title }}
+          </p>
+          <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
+        </li>
+      </ul>
     </div>
-    <ul v-if="testimonies && testimonies.length">
-      <li :key="testimony.title" v-for="testimony in testimonies">
-        <p>
-          <img :src="`../app-icons/default_icon.svg`" />
-          {{ testimony.title }}
-        </p>
-        <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -151,5 +153,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#searchContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 }
 </style>

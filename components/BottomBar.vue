@@ -89,6 +89,9 @@ export default {
 }
 .buttonRow {
   display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
 
   & button {
     background: #fff;
