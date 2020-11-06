@@ -1,46 +1,50 @@
 <template>
   <ul>
     <li
-      :key="filter"
-      v-for="filter in filters"
-      @click="updateFilter(filter)"
-      :class="chosenFilters.includes(filter) ? 'chosen' : ''"
+      :key="categorie"
+      v-for="categorie in categories"
+      @click="updateCategory(categorie)"
+      :class="chosenCategories.includes(categorie) ? 'chosen' : ''"
     >
       <img
-        :src="`app-icons/${filter.toLowerCase()}_icon.svg`"
-        :alt="`${filter} icon`"
+        :src="`app-icons/${categorie.toLowerCase()}_icon.svg`"
+        :alt="`${categorie} icon`"
       />
-      {{ filter }}
+      {{ categorie }}
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: "Filters",
+  name: "Categories",
   data() {
     return {
-      filters: [
+      categories: [
         "All",
         "Miracle",
         "Sexual",
+        "Addiction",
         "Salvation",
         "Healing",
-        "Everyday",
         "Other",
       ],
-      chosenFilters: [],
+      chosenCategories: [],
     };
   },
   methods: {
-    updateFilter(filter) {
-      const { chosenFilters, filters } = this;
-      if (chosenFilters.indexOf(filter) === -1) chosenFilters.push(filter);
-      else this.chosenFilters = chosenFilters.filter((fil) => fil !== filter);
+    updateCategory(category) {
+      const { chosenCategories, categories } = this;
+      if (chosenCategories.indexOf(category) === -1)
+        chosenCategories.push(category);
+      else
+        this.chosenCategories = chosenCategories.filter(
+          (cat) => cat !== category
+        );
 
-      if (chosenFilters.includes("All")) this.chosenFilters = [];
+      if (chosenCategories.includes("All")) this.chosenCategories = [];
 
-      this.$nuxt.$emit("updateFilters", this.chosenFilters);
+      this.$nuxt.$emit("updateCategories", this.chosenCategories);
     },
   },
 };

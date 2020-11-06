@@ -1,17 +1,17 @@
 <template>
-  <div id="sideFilters" :class="show ? 'show' : ''">
+  <div id="sideCategories" :class="show ? 'show' : ''">
     <div class="testimoniesLengthContainer">
       <img src="app-icons/default_icon.svg" />
       <p v-if="filteredTestimonies && testimonies">
         {{ filteredTestimonies.length }} / {{ testimonies.length }}
       </p>
     </div>
-    <Filters />
+    <Categories />
   </div>
 </template>
 
 <script>
-import Filters from "./Filters";
+import Categories from "./Categories";
 export default {
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
 
 
 <style lang="scss" scoped>
-#sideFilters {
+#sideCategories {
   background: #fcfcfc;
   border-right: 1px solid #eee;
 

@@ -25,7 +25,7 @@ export default {
       lastScrollTop: 0,
       buttons: [
         {
-          label: "Filters",
+          label: "Categories",
           condition: this.open,
           action: this.openInfo,
           icon: "default_icon.svg",
