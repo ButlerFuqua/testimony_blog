@@ -50,7 +50,7 @@ export default {
   overflow: hidden;
   min-width: 80px;
   margin-left: -80px;
-  transition: 0.1s;
+  transition: 0.2s;
 
   &.show {
     margin-left: 0;

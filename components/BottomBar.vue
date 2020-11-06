@@ -37,7 +37,7 @@ export default {
           icon: "default_icon.svg",
         },
         {
-          label: "Home",
+          label: "List",
           condition: true,
           action: () => this.$router.push("/"),
           icon: "default_icon.svg",
