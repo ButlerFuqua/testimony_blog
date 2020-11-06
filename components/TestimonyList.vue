@@ -21,33 +21,35 @@ export default {
   data() {
     return {
       filteredTestimonies: [],
-      chosenFiltes: [],
+      chosenCategories: [],
     };
   },
   watch: {
     testimonies(val) {
-      this.updateFilters(this.chosenFiltes);
+      this.updateCategories(this.chosenCategories);
     },
   },
   methods: {
-    updateFilters(chosenFiltes) {
-      chosenFiltes = chosenFiltes.map((filter) => filter.toLowerCase());
+    updateCategories(chosenCategories) {
+      chosenCategories = chosenCategories.map((filter) => filter.toLowerCase());
       let testimonies = [...this.testimonies];
-      this.chosenFiltes = [...chosenFiltes];
-      if (!chosenFiltes.length) this.filteredTestimonies = testimonies;
+      this.chosenCategories = [...chosenCategories];
+      if (!chosenCategories.length) this.filteredTestimonies = testimonies;
       else
-        this.filteredTestimonies = this.returnFilteredTestimonies(chosenFiltes);
+        this.filteredTestimonies = this.returnFilteredTestimonies(
+          chosenCategories
+        );
       this.sendTestimoniesToSidebar();
     },
-    returnFilteredTestimonies(chosenFiltes) {
+    returnFilteredTestimonies(chosenCategories) {
       return this.testimonies.filter(
         (testimony) => testimony.tags && _hasAllFilters(testimony.tags)
       );
 
       function _hasAllFilters(tags) {
         let passes = false;
-        for (let idx = 0; idx < chosenFiltes.length; idx++) {
-          let fil = chosenFiltes[idx];
+        for (let idx = 0; idx < chosenCategories.length; idx++) {
+          let fil = chosenCategories[idx];
           if (tags.includes(fil)) passes = true;
           else {
             passes = false;
@@ -68,14 +70,14 @@ export default {
   created() {
     this.filteredTestimonies = [...this.testimonies];
 
-    this.$nuxt.$on("updateFilters", (chosenFiltes) =>
-      this.updateFilters(chosenFiltes)
+    this.$nuxt.$on("updateCategories", (chosenCategories) =>
+      this.updateCategories(chosenCategories)
     );
 
     this.sendTestimoniesToSidebar();
   },
   beforeDestroy() {
-    this.$nuxt.$off("updateFilters");
+    this.$nuxt.$off("updateCategories");
   },
 };
 </script>

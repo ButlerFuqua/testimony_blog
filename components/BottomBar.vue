@@ -97,7 +97,6 @@ export default {
     background: #fff;
     border-radius: 0;
     border: 1px solid #eee;
-    // border: none;
     flex-grow: 1;
     cursor: pointer;
     display: flex;

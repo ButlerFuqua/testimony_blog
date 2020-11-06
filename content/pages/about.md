@@ -7,4 +7,6 @@ pageOrder: 1
 
 # About this Site
 
-This is the About page.
+The site has a single purpose: 
+
+To share real and modern day testimonies that many people only believe happened in biblical times.
