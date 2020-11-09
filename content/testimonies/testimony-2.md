@@ -4,6 +4,7 @@ description: Learning how to use @nuxt/content to create a blog
 img: second-blog-post.jpg
 alt: second testimony
 tags: ["healing", "salvation"]
+type: "article"
 published: 10/18/2020
 occured: 02/03/1990
 postNumber: 2

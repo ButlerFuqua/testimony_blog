@@ -3,6 +3,7 @@ title: This is my sixth testimony
 description: Learning how to use @nuxt/content to create a blog
 img: sixth-blog-post.jpg
 alt: sixth testimony
+type: "article"
 published: 10/22/2020
 occured: 02/03/1990
 postNumber: 5

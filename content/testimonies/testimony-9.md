@@ -4,6 +4,7 @@ description: Learning how to use @nuxt/content to create a blog
 img: ninth-blog-post.jpg
 alt: ninth testimony
 tags: ["healing", "salvation"]
+type: "video"
 published: 10/29/2020
 occured: 02/03/1990
 postNumber: 9

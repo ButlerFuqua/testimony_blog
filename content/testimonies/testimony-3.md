@@ -4,6 +4,7 @@ description: Learning how to use @nuxt/content to create a blog
 img: third-blog-post.jpg
 alt: third testimony
 tags: [ "salvation"]
+type: "video"
 published: 10/20/2020
 occured: 02/03/1990
 postNumber: 3

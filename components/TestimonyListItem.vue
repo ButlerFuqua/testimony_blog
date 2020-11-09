@@ -1,7 +1,7 @@
 <template>
   <li>
     <h3>
-      <img src="app-icons/default_icon.svg" />
+      <img :src="`app-icons/${testimony.type}_icon.svg`" />
       {{ testimony.title }}
     </h3>
     <small
@@ -9,7 +9,8 @@
       {{ testimony.occured || "Unknown" }}</small
     >
     <p>{{ testimony.description }}</p>
-    <div class="tags">
+    <div class="meta">
+      <span :class="testimony.type">{{ testimony.type }}</span>
       <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
       <!-- <div :key="tag" v-for="tag in testimony.tags">
         <img :src="`app-icons/${tag}_icon.svg`" :alt="`${tag} icon`" />
@@ -62,7 +63,7 @@ small {
   margin: 1rem 0;
 }
 
-.tags {
+.meta {
   display: flex;
   span {
     padding: 0.1rem 0.5rem;
@@ -75,6 +76,18 @@ small {
   span + span,
   img + img {
     margin-left: 0.5rem;
+  }
+
+  span.video {
+    background: #dd4a4a;
+    border: 1px solid #dd4a4a;
+    color: #fff;
+  }
+
+  span.article {
+    background: #00ff55;
+    border: 1px solid #00ff55;
+    // color: #fff;
   }
 
   // div {

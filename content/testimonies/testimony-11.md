@@ -3,6 +3,7 @@ title: This is my eleventh testimony
 description: Learning how to use @nuxt/content to create a blog
 img: eleventh-blog-post.jpg
 alt: eleventh testimony
+type: "article"
 published: 10/31/2020
 occured: 02/03/1990
 postNumber: 11

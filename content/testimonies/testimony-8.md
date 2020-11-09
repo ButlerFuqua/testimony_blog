@@ -3,6 +3,7 @@ title: My eighth Blog Post
 description: Learning how to use @nuxt/content to create a blog
 img: eighth-blog-post.jpg
 alt: my eighth blog post
+type: "video"
 published: 10/28/2020
 occured: 02/03/1990
 postNumber: 8
