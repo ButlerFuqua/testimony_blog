@@ -12,13 +12,10 @@
     <div class="meta">
       <span :class="testimony.type">{{ testimony.type }}</span>
       <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
-      <!-- <div :key="tag" v-for="tag in testimony.tags">
-        <img :src="`app-icons/${tag}_icon.svg`" :alt="`${tag} icon`" />
-      </div> -->
     </div>
     <br />
     <div class="readBtnContainer">
-      <CTALink :path="`/testimonies/${testimony.slug}`" text="Read" />
+      <CTALink :path="`/testimonies/${testimony.slug}`" text="View" />
     </div>
   </li>
 </template>
@@ -89,26 +86,6 @@ small {
     border: 1px solid #00ff55;
     // color: #fff;
   }
-
-  // div {
-  //   width: 45px;
-  //   height: 45px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   border: 2px solid #2aa1d4;
-  //   border-radius: 45px;
-  //   margin: 0.5rem 0;
-  // }
-  // div + div {
-  //   margin-left: 0.5rem;
-  // }
-
-  // img {
-  //   width: 30px;
-  //   max-height: 30px;
-  //   padding: 1px;
-  // }
 }
 
 .readBtnContainer {
