@@ -2,7 +2,18 @@
   <main>
     <TitleBar title="The Gospel" :hideGospelBtn="true" />
     <div class="container">
-      <div class="content">The gospel</div>
+      <div class="content">
+        <div class="youtubeContainer">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/sNme1cRSODI?start=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   </main>
 </template>
