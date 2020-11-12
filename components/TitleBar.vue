@@ -1,16 +1,18 @@
 <template>
   <div class="container">
-    <!-- <button @cligitck="openInfo">{{ open }}</button> -->
     <div>
       <h1>{{ title }}</h1>
     </div>
+    <button v-if="!hideGospelBtn" @click="$router.push('/gospel')">
+      Gospel
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   name: "TitleBar",
-  props: ["title", "open"],
+  props: ["title", "open", "hideGospelBtn"],
   methods: {
     openInfo() {
       this.$nuxt.$emit(`open${this.open}`);

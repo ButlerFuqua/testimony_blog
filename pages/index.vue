@@ -13,7 +13,7 @@ import TestimonyList from "../components/TestimonyList";
 export default Vue.extend({
   async asyncData({ $content, params }) {
     const testimonies = await $content("testimonies", params.slug)
-      .sortBy("postNumber", "asc")
+      .sortBy("postNumber", "desc")
       .limit(10)
       .fetch();
     return {

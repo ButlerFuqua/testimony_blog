@@ -1,9 +1,9 @@
 ---
 title: Crushed back healed in an instant
-description: Two new Christians lay hands and see a man's back healed instantly and immediately gives his life to Christ. 
+description: Two new Christians see a man's back healed instantly and the man immediately gives his life to Christ. 
 img: default.jpg
 alt: default
-tags: ["healing", "salvation"]
+tags: ["miracle", "healing", "salvation"]
 type: "video"
 published: 11/11/2020
 occured: false

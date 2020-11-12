@@ -8,7 +8,7 @@
       >Published: {{ testimony.published }}
       {{ testimony.occured ? ` | Occured: ${testimony.occured}` : "" }}</small
     >
-    <p>{{ testimony.description }}</p>
+    <p class="description">{{ testimony.description }}</p>
     <div class="meta">
       <span :class="testimony.type">{{ testimony.type }}</span>
       <span :key="tag" v-for="tag in testimony.tags">{{ tag }} </span>
@@ -60,8 +60,13 @@ small {
   margin: 1rem 0;
 }
 
+.description {
+  font-size: 0.9rem;
+}
+
 .meta {
   display: flex;
+  flex-wrap: wrap;
   span {
     padding: 0.1rem 0.5rem;
     border: 1px solid #f0c002;

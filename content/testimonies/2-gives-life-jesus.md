@@ -1,5 +1,5 @@
 ---
-title: Emotional young man gives his life to Jesus
+title: Young man gives his life to Jesus
 description: This young man gives his life to Jesus moments after hearing the Gospel. Please watch this very emotional example of evangelism. 
 img: default.jpg
 alt: default
