@@ -4,15 +4,17 @@
     <div id="contentContainer">
       <nuxt-content style="padding: 1rem" :document="testimony" />
     </div>
+    <ShareTestimonyCTA />
   </article>
 </template>
 
 <script >
 import TitleBar from "../../components/TitleBar";
+import ShareTestimonyCTA from "../../components/ShareTestimonyCTA";
 
 export default {
   layout: "readPage",
-  components: { TitleBar },
+  components: { TitleBar, ShareTestimonyCTA },
   data() {
     return {
       testimony: null,
@@ -47,7 +49,7 @@ article {
   flex-grow: 1;
   height: 100%;
   overflow: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   #contentContainer {
     width: 100%;
@@ -57,6 +59,14 @@ article {
     * {
       max-width: 100%;
     }
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
   }
 }
 </style>

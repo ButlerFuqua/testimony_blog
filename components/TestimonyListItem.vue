@@ -5,8 +5,8 @@
       {{ testimony.title }}
     </h3>
     <small
-      >Published: {{ testimony.published || "Unkown" }} | Occured:
-      {{ testimony.occured || "Unknown" }}</small
+      >Published: {{ testimony.published }}
+      {{ testimony.occured ? ` | Occured: ${testimony.occured}` : "" }}</small
     >
     <p>{{ testimony.description }}</p>
     <div class="meta">
