@@ -9,4 +9,4 @@ pageOrder: 2
 
 This is the Submit page.
 
-Visit [THIS LINK](https://forms.gle/4VzcBJQ3ZSFvNdk6A) to submit a testimony.
+Email your testimony to <strong>testimonies.app.info@gmail.com</strong>
