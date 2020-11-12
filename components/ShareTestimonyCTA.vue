@@ -1,10 +1,12 @@
 <template>
   <div id="shareYourTestimonyCTA">
-    <h3>Do you have a testimony to share?</h3>
-    <hr />
-    <p>
-      Email your testimony to <strong>testimonies.app.info@gmail.com</strong>
-    </p>
+    <div>
+      <h3>Do you have a testimony to share?</h3>
+      <hr />
+      <p>
+        Email your testimony to <strong>testimonies.app.info@gmail.com</strong>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -16,12 +18,16 @@ export default {
 
 <style lang="scss" scoped>
 #shareYourTestimonyCTA {
-  padding: 1rem;
   background: #6b0af0;
   color: #fff;
 
-  hr {
-    margin: 0.5rem auto;
+  div {
+    padding: 1rem;
+    max-width: 900px;
+    margin: auto;
+    hr {
+      margin: 0.5rem auto;
+    }
   }
 }
 </style>
