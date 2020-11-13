@@ -133,11 +133,14 @@ export default {
           margin-right: 1rem;
         }
       }
+
+      a {
+        margin-left: 5px;
+      }
     }
   }
 
   .inputContainer {
-    margin-top: 5px;
     display: flex;
     align-content: center;
     justify-content: center;
