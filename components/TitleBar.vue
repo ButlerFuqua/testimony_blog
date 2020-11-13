@@ -39,6 +39,7 @@ export default {
 
   h1 {
     font-size: 1.5rem;
+    margin: 0;
   }
 
   @media (min-width: 801px) {

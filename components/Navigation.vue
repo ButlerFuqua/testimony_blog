@@ -42,6 +42,9 @@ export default {
 
 
 <style lang="scss" scoped>
+* {
+  margin: 0;
+}
 #sideCategories {
   background: #fcfcfc;
   border-right: 1px solid #eee;
