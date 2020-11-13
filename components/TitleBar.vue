@@ -30,6 +30,7 @@ export default {
   color: white;
   display: flex;
   padding: 0.5rem;
+  align-items: center;
 
   div {
     width: 100%;
@@ -44,6 +45,14 @@ export default {
 
   @media (min-width: 801px) {
     // display: none;
+  }
+
+  button {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0.5rem;
   }
 }
 </style>
