@@ -87,6 +87,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  margin: 0;
+}
 .container {
   position: fixed;
   height: 100%;
@@ -115,6 +118,7 @@ export default {
       padding: 1rem;
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       p {
         display: flex;
