@@ -78,10 +78,15 @@ export default {
       this.$refs.searchInput.focus();
     });
 
+    this.$nuxt.$on("hideTestinmonySearch", () => {
+      this.showTestinmonySearch = false;
+    });
+
     this.testimonies = await this.getAllTestimonies();
   },
   beforeDestroy() {
     this.$nuxt.$off("showTestinmonySearch");
+    this.$nuxt.$off("hideTestinmonySearch");
   },
 };
 </script>

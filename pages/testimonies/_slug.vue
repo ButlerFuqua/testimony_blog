@@ -34,6 +34,8 @@ export default {
   },
   async created() {
     await this.getTestimony();
+
+    this.$nuxt.$emit("hideTestinmonySearch");
   },
   mounted() {
     this.$nuxt.$emit("updateInfo", this.testimony);
