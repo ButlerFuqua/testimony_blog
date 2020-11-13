@@ -36,9 +36,5 @@ export default Vue.extend({
   width: 100%;
   max-width: 900px;
   margin: auto;
-
-  * {
-    max-width: 100%;
-  }
 }
 </style>

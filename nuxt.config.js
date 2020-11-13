@@ -13,8 +13,11 @@ export default {
     ]
   },
   css: [
-    '~/styles/global.css'
+    '~/styles/global.scss'
   ],
+  styleResources: {
+    scss: ['~/styles/resources/*.scss']
+  },
   plugins: [
   ],
   components: true,
@@ -42,6 +45,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxt/content',
+    '@nuxtjs/style-resources'
 
     // [
     //   '@nuxtjs/firebase',
