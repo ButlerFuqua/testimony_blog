@@ -151,14 +151,14 @@ input {
   width: 100%;
   padding: 0.5rem;
   border-radius: 0;
-  border: 1px solid #333;
+  border: 1px solid $darkGrey;
 }
 
 button {
   border-radius: 0;
   border: none;
-  background: #333;
-  color: #fff;
+  background: $darkGrey;
+  color: $white;
 }
 
 .flex {

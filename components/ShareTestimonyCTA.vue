@@ -18,8 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 #shareYourTestimonyCTA {
-  background: #6b0af0;
-  color: #fff;
+  background: $primary;
+  color: $white;
 
   div {
     padding: 1rem;

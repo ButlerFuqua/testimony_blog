@@ -12,10 +12,10 @@ export default {
 
 <style lang="scss" scoped>
 button {
-  background: #6154ab;
-  border: 1px solid #6154ab;
+  background: $secondary;
+  border: 1px solid $secondary;
   text-decoration: none;
-  color: #fff;
+  color: $white;
   padding: 5px 15px;
   border-radius: 1rem;
 }

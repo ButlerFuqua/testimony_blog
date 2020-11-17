@@ -11,9 +11,9 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  background: #6b0af0;
+  background: $primary;
   text-decoration: none;
-  color: #fff;
+  color: $white;
   padding: 5px 15px;
   border-radius: 1rem;
   box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.5);

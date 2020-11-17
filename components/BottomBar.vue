@@ -77,7 +77,7 @@ export default {
 .container {
   position: fixed;
   bottom: 0;
-  background: #fff;
+  background: $white;
   left: 0;
   width: 100%;
 
@@ -94,7 +94,7 @@ export default {
   margin: auto;
 
   & button {
-    background: #fff;
+    background: $white;
     border-radius: 0;
     border: 1px solid #eee;
     flex-grow: 1;

@@ -37,4 +37,7 @@ export default Vue.extend({
   max-width: 900px;
   margin: auto;
 }
+blockquote {
+  background: coral;
+}
 </style>

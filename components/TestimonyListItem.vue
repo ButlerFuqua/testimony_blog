@@ -51,7 +51,7 @@ li {
   list-style: none;
   margin: 1rem auto;
   padding: 1rem;
-  background: #fff;
+  background: $white;
   border-radius: 5px;
 }
 
@@ -69,8 +69,8 @@ small {
   flex-wrap: wrap;
   span {
     padding: 0.1rem 0.5rem;
-    border: 1px solid #f0c002;
-    background: #f0c002;
+    border: 1px solid $default;
+    background: $default;
     border-radius: 2rem;
     margin: 0.5rem 0;
     font-size: 0.8rem;
@@ -83,13 +83,13 @@ small {
   span.video {
     background: #dd4a4a;
     border: 1px solid #dd4a4a;
-    color: #fff;
+    color: $white;
   }
 
   span.article {
     background: #00ff55;
     border: 1px solid #00ff55;
-    // color: #fff;
+    // color: $white;
   }
 }
 

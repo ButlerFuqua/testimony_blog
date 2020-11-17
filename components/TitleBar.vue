@@ -26,8 +26,8 @@ export default {
   position: sticky;
   z-index: 1;
   top: 0;
-  background: #000;
-  color: white;
+  background: $black;
+  color: $white;
   display: flex;
   padding: 0.5rem;
   align-items: center;
@@ -49,8 +49,8 @@ export default {
 
   button {
     background: none;
-    color: white;
-    border: 2px solid white;
+    color: $white;
+    border: 2px solid $white;
     border-radius: 50%;
     padding: 0.5rem;
   }
