@@ -32,10 +32,23 @@ html,body,
   box-sizing: border-box;
 }
 
+h1,h2,h3,h4,h5,h6{
+  a{
+    background: none;
+    padding: 0;
+
+  }
+}
+
 a {
   color: $success;
-  // background: #dcdcdc;
-  // padding: 3px;
+  // text-decoration: none;
+	// border-bottom: .125em solid $success;
+  // position: relative;
+  // background: $darkBackground;
+  // padding: 2px;
+  // border-radius: 2px;;
+
 }
 
 ul {
