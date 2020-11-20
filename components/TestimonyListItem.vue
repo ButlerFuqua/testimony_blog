@@ -81,14 +81,14 @@ small {
   }
 
   span.video {
-    background: #dd4a4a;
-    border: 1px solid #dd4a4a;
+    background: $tursh;
+    border: 1px solid $tursh;
     color: $white;
   }
 
   span.article {
-    background: #00ff55;
-    border: 1px solid #00ff55;
+    background: $quad;
+    border: 1px solid $quad;
     // color: $white;
   }
 }

@@ -32,23 +32,11 @@ html,body,
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6{
-  a{
-    background: none;
-    padding: 0;
-
-  }
-}
-
-a {
-  color: $success;
-  // text-decoration: none;
-	// border-bottom: .125em solid $success;
-  // position: relative;
-  // background: $darkBackground;
-  // padding: 2px;
-  // border-radius: 2px;;
-
+a, a:link, a:visited, a:hover, a:active {
+  color: $link;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid;
 }
 
 ul {
