@@ -31,11 +31,11 @@ export default {
       display: "standalone",
       lang: 'en',
       useWebmanifestExtension: false
-    },
-    workbox: {
-      cleanupOutdatedCaches: true,
-      // cacheAssets: true
     }
+  },
+  workbox: {
+    cleanupOutdatedCaches: true,
+    // cacheAssets: true
   },
   buildModules: [
     '@nuxtjs/pwa',
