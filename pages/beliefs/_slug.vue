@@ -4,7 +4,7 @@
       style="margin: 1rem auto"
       @click="$router.push('/beliefs')"
       outlined
-      color="teal"
+      color="teal darken-2"
       aria-label="back"
       >Back</v-btn
     >
