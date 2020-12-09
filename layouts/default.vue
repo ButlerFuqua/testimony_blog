@@ -64,6 +64,11 @@ export default {
           to: "/signup",
         },
         {
+          icon: "mdi-christianity-outline",
+          title: "Statement of Beliefs",
+          to: "/beliefs"
+        },
+        {
           icon: "mdi-head-question-outline",
           title: "FAQ",
           to: "/faq",

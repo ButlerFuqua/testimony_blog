@@ -8,7 +8,11 @@
     <h2>A decentralized network of believers and their testimonies.</h2>
     <v-divider inset style="margin: 1rem auto"></v-divider>
     <section class="infoSection text-left">
-    <p>Here are more specifics...</p>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>Single-line item</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
     </section>
     <NumberSubmission />
   </v-container>
