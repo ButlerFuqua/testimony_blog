@@ -69,6 +69,11 @@ export default {
           to: "/beliefs"
         },
         {
+          icon: "mdi-christianity-outline",
+          title: "Articles",
+          to: "/articles"
+        },
+        {
           icon: "mdi-head-question-outline",
           title: "FAQ",
           to: "/faq",
