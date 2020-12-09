@@ -1,4 +1,4 @@
-# Testinmony Blog
+# Testimonies
 
 ## Build Setup
 
@@ -16,7 +16,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-## Content
-
-Markdown articles that share incredible testimonies from the Lord Jesus Christ.

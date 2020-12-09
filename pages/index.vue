@@ -1,57 +1,40 @@
 <template>
-  <main>
-    <TitleBar :title="`Testimonies`" :open="'Navigation'" />
-    <TestimonyList v-if="testimonies" :testimonies="testimonies" />
-  </main>
+  <v-container class="text-center" justify="center" align="center">
+    <div class="logoContainer">
+      <Logo />
+    </div>
+
+    <h1>The Testimonies App</h1>
+    <h2>A decentralized network of believers and their testimonies.</h2>
+    <v-divider inset style="margin: 1rem auto"></v-divider>
+    <section class="infoSection text-left">
+    <p>Here are more specifics...</p>
+    </section>
+    <NumberSubmission />
+  </v-container>
 </template>
 
 <script>
-import Vue from "vue";
-import TitleBar from "../components/TitleBar";
-import TestimonyList from "../components/TestimonyList";
+import Axios from "axios";
 
-export default Vue.extend({
-  async asyncData({ $content, params }) {
-    const testimonies = await $content("testimonies", params.slug)
-      .sortBy("postNumber", "desc")
-      .limit(10)
-      .fetch();
-    return {
-      testimonies,
-    };
-  },
-  components: { TitleBar, TestimonyList },
+import Logo from "../components/logo";
+import NumberSubmission from "../components/numberSubmission";
+export default {
+  components: { Logo, NumberSubmission },
   data() {
-    return {
-      testimoniesPerLoad: 10,
-    };
+    return {};
   },
-  methods: {
-    async loadMoreTestimoines() {
-      let moreTestimoines = await this.$content(
-        "testimonies",
-        this.$route.params.slug
-      )
-        .sortBy("postNumber", "asc")
-        .skip(this.testimonies.length)
-        .limit(this.testimoniesPerLoad)
-        .fetch();
-
-      this.testimonies = [...this.testimonies, ...moreTestimoines];
-    },
-  },
-  created() {
-    this.$nuxt.$on("loadMoreTestimonies", () => this.loadMoreTestimoines());
-  },
-});
+  methods: {},
+  async created() {},
+};
 </script>
 
-<style lang="scss" scoped>
-main {
-  height: 100vh;
-  flex-grow: 1;
-  overflow: auto;
-  position: relative;
-  background: #eee;
+<style scoped>
+h1 {
+  font-size: 3rem;
+}
+.logoContainer {
+  width: 5rem;
+  margin: auto;
 }
 </style>
