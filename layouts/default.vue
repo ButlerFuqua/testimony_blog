@@ -55,7 +55,7 @@ export default {
       navItems: [
         {
           icon: "mdi-apps",
-          title: "About",
+          title: "Welcome",
           to: "/",
         },
         {
@@ -66,13 +66,13 @@ export default {
         {
           icon: "mdi-christianity-outline",
           title: "Beliefs",
-          to: "/beliefs"
+          to: "/beliefs",
         },
-        {
-          icon: "mdi-christianity-outline",
-          title: "Articles",
-          to: "/articles"
-        },
+        // {
+        //   icon: "mdi-newspaper-variant-multiple",
+        //   title: "Articles",
+        //   to: "/articles",
+        // },
         {
           icon: "mdi-head-question-outline",
           title: "FAQ",
