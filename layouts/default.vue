@@ -65,7 +65,7 @@ export default {
         },
         {
           icon: "mdi-christianity-outline",
-          title: "Statement of Beliefs",
+          title: "Beliefs",
           to: "/beliefs"
         },
         {
