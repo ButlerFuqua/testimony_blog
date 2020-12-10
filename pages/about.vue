@@ -1,9 +1,22 @@
 <template>
   <div>
-    <h1>About page</h1>
+    <nuxt-content :document="page" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  async asyncData({ $content, params }) {
+    let page;
+    try {
+      page = await $content("pages", params.slug).fetch();
+      // OR const page = await $content(`pages/${params.slug}`).fetch()
+    } catch (e) {
+      console.log(e);
+    }
+    page = page[0];
+
+    return { page };
+  },
+};
 </script>
