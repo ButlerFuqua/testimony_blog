@@ -8,11 +8,7 @@
     <h2>A decentralized network of believers and their testimonies.</h2>
     <v-divider inset style="margin: 1rem auto"></v-divider>
     <section class="infoSection text-left">
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title>Single-line item</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
+      <Features />
     </section>
     <NumberSubmission />
   </v-container>
@@ -23,8 +19,9 @@ import Axios from "axios";
 
 import Logo from "../components/logo";
 import NumberSubmission from "../components/numberSubmission";
+import Features from "../components/features";
 export default {
-  components: { Logo, NumberSubmission },
+  components: { Logo, NumberSubmission, Features },
   data() {
     return {};
   },

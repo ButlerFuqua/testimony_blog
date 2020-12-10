@@ -59,6 +59,11 @@ export default {
           to: "/",
         },
         {
+          icon: "mdi-cellphone-information",
+          title: "About",
+          to: "/about",
+        },
+        {
           icon: "mdi-phone-plus",
           title: "Sign Up",
           to: "/signup",
@@ -74,7 +79,7 @@ export default {
         //   to: "/articles",
         // },
         {
-          icon: "mdi-head-question-outline",
+          icon: "mdi-help",
           title: "FAQ",
           to: "/faq",
         },
