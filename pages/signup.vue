@@ -17,13 +17,11 @@
         Submit your phone number below (if you haven't already), and you will be
         texted when the app is ready for download
       </p>
+      <p>
+        You will also be signed up for the email newsletter when it launches.
+      </p>
     </div>
-
-    <p>
-      Your number will only be used to notify you when the app is ready. 1-3
-      texts is the most we plan to send out.
-    </p>
-    <NumberSubmission />
+    <SignupSubmission />
   </v-container>
 </template>
 
@@ -31,7 +29,7 @@
 import Axios from "axios";
 
 import Logo from "../components/logo";
-import NumberSubmission from "../components/numberSubmission";
+import SignupSubmission from "../components/signupSubmission";
 export default {
   async asyncData({ $content, route }) {
     const q = route.query.q;
@@ -46,7 +44,7 @@ export default {
       faqs,
     };
   },
-  components: { Logo, NumberSubmission },
+  components: { Logo, SignupSubmission },
   data() {
     return {
       numberOfSignups: null,
@@ -55,7 +53,7 @@ export default {
   methods: {
     async setNumberOfSignups() {
       const phoneNumbers = await this.$fire.database
-        .ref(`/submitted_phone_numbers`)
+        .ref(`/signup_submissions`)
         .once("value");
 
       this.numberOfSignups = Object.keys(phoneNumbers.val()).length;

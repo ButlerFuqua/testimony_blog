@@ -1,7 +1,7 @@
 ---
 title: Sexuality has rules
 verses: ["verse 1", "verse 2"]
-description: Like all things to be enjoyed in life, there are godly constraints around sexuality. Anything other than consensual sex between a married man and woman is sin.
+description: Like all things to be enjoyed in life, there are godly constraints around sexuality. Any sexual act outside of a consensual, heterosexual marriage is sin.
 order_number: 5
 ---
 

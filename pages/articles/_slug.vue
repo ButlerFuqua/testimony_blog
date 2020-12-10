@@ -1,20 +1,16 @@
 <template>
   <article v-if="article">
-    <v-btn
-      style="margin: 1rem auto"
-      @click="$router.push('/articles')"
-      outlined
-      color="teal darken-2"
-      aria-label="back"
-      >Back</v-btn
-    >
+    <BackButton path="/articles" />
     <nuxt-content :document="article" />
+    <BackButton path="/articles" />
   </article>
   <article v-else>Erorr retreiving article.</article>
 </template>
 
 <script>
+import BackButton from "../../components/backButton.vue";
 export default {
+  components: { BackButton },
   async asyncData({ $content, params }) {
     let article;
     try {

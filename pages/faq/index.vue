@@ -13,16 +13,15 @@
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <nuxt-content :document="faq" />
-
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-    <NumberSubmission />
+    <SignupSubmission />
   </div>
 </template>
 
 <script>
-import NumberSubmission from "../../components/numberSubmission";
+import SignupSubmission from "../../components/signupSubmission";
 export default {
   async asyncData({ $content, route }) {
     const q = route.query.q;
@@ -45,7 +44,7 @@ export default {
     },
   },
   watchQuery: true,
-  components: { NumberSubmission },
+  components: { SignupSubmission },
 
   methods: {},
 };

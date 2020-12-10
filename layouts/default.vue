@@ -59,14 +59,14 @@ export default {
           to: "/",
         },
         {
-          icon: "mdi-cellphone-information",
-          title: "About",
-          to: "/about",
-        },
-        {
           icon: "mdi-phone-plus",
           title: "Sign Up",
           to: "/signup",
+        },
+        {
+          icon: "mdi-cellphone-information",
+          title: "About",
+          to: "/about",
         },
         {
           icon: "mdi-christianity-outline",

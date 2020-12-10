@@ -11,15 +11,15 @@
     <nuxt-content :document="faq" />
     <v-divider style="margin: 1rem auto"></v-divider>
 
-    <NumberSubmission />
+    <SignupSubmission />
   </article>
   <article v-else>Erorr retreiving FAQ.</article>
 </template>
 
 <script>
-import NumberSubmission from "../../components/numberSubmission";
+import SignupSubmission from "../../components/signupSubmission";
 export default {
-  components: { NumberSubmission },
+  components: { SignupSubmission },
   async asyncData({ $content, params }) {
     let faq;
     try {

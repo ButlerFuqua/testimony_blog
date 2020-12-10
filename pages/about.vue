@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <nuxt-content :document="page" />
-  </div>
+  <nuxt-content :document="page" />
 </template>
 
 <script>
@@ -10,7 +8,6 @@ export default {
     let page;
     try {
       page = await $content("pages", params.slug).fetch();
-      // OR const page = await $content(`pages/${params.slug}`).fetch()
     } catch (e) {
       console.log(e);
     }

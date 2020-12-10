@@ -12,8 +12,8 @@
             <v-btn
               class="text-center"
               @click="$router.push(`/features/${feature.slug}`)"
-              outlined
               color="teal darken-2"
+              outlined
               >Read more</v-btn
             >
           </div>
