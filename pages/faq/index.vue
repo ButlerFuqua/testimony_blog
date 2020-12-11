@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="headline mb-5 text-center">Frequently Asked Questions (FAQ)</h1>
+    <PageHeading title="Frequently Asked Questions (FAQ)" />
 
     <v-expansion-panels accordion class="mb-5">
       <v-expansion-panel
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import PageHeading from "../../components/pageHeading";
 import SignupSubmission from "../../components/signupSubmission";
 export default {
   async asyncData({ $content, route }) {
@@ -44,7 +45,7 @@ export default {
     },
   },
   watchQuery: true,
-  components: { SignupSubmission },
+  components: { SignupSubmission, PageHeading },
 
   methods: {},
 };

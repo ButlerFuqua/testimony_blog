@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <h1 class="headline">{{ title }}</h1>
     <p v-if="subTitle">
       {{ subTitle }}
     </p>
     <p v-if="body">
       {{ body }}
     </p>
-    <v-divider class="mb-4"></v-divider>
+    <v-divider class="mb-4 mt-2"></v-divider>
   </div>
 </template>
 

@@ -1,0 +1,37 @@
+
+
+.nuxt-content h1{
+    font-size: 3rem !important;
+    font-weight: 400;
+    line-height: 3.125rem;
+    letter-spacing: normal !important;
+    font-family: "Roboto", sans-serif !important;
+    margin-bottom: 16px !important;
+}
+
+.nuxt-content h2{
+    font-size: 3rem !important;
+    font-weight: 300;
+    line-height: 3.125rem;
+    letter-spacing: normal !important;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.nuxt-content h3{
+    font-size: 2.125rem !important;
+    font-weight: 300;
+    line-height: 2.5rem;
+    letter-spacing: 0.0073529412em !important;
+    font-family: "Roboto", sans-serif !important;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.nuxt-content p {
+    font-size: 1.25rem !important;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: 0.0125em !important;
+    font-family: "Roboto", sans-serif !important;
+    margin-bottom: 16px;
+}

@@ -28,7 +28,7 @@
 
       <v-spacer />
     </v-app-bar>
-    <v-main class="grey lighten-3">
+    <v-main class="grey lighten-4">
       <v-container>
         <nuxt />
       </v-container>
