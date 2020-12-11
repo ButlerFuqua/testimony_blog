@@ -56,8 +56,10 @@
       </v-container>
     </v-form>
     <div v-else>
-      <p>You're all set!</p>
-      <p>Thanks for believing in us.</p>
+      <p class="title font-weight-light">You're all set!</p>
+      <p class="title font-weight-light">
+        Thank you for for believing, {{ messageName }}.
+      </p>
     </div>
   </v-alert>
 </template>
@@ -71,6 +73,7 @@ export default {
       notYetSubmitted: true,
       numberOfSignups: null,
       loading: false,
+      messageName: "",
 
       valid: false,
       firstname: "",
@@ -121,6 +124,8 @@ export default {
       } catch (error) {
         return alert("Sorry, there was an error");
       }
+
+      this.messageName = this.firstname;
 
       this.notYetSubmitted = false;
 

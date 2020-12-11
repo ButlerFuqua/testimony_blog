@@ -27,9 +27,9 @@
         </v-card-actions>
         <v-card-actions>
           <ReadButton :path="`/beliefs/${belief.slug}`" text="Read more" />
-          <!-- <v-btn @click="$router.push(`/beliefs/${belief.slug}`)" outlined color="teal darken-2">Read more</v-btn> -->
         </v-card-actions>
       </v-card-text>
+      <v-divider></v-divider>
     </v-card>
   </v-container>
 </template>
