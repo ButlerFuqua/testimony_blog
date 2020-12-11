@@ -1,9 +1,15 @@
 <template>
-  <nuxt-content :document="page" />
+  <article>
+    <nuxt-content :document="page" />
+    <SignupSubmission />
+  </article>
 </template>
 
 <script>
+import SignupSubmission from "../components/signupSubmission.vue";
+
 export default {
+  components: { SignupSubmission },
   async asyncData({ $content, params }) {
     let page;
     try {
