@@ -49,14 +49,14 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: process.env.apiKey,
-          authDomain: process.env.authDomain,
-          databaseURL: process.env.databaseURL,
-          projectId: process.env.projectId,
-          storageBucket: process.env.storageBucket,
-          messagingSenderId: process.env.messagingSenderId,
-          appId: process.env.appId,
-          measurementId: process.env.measurementId
+          apiKeyt: process.env.apiKey,
+          authDomaint: process.env.authDomain,
+          databaseURLt: process.env.databaseURL,
+          projectIdt: process.env.projectId,
+          storageBuckett: process.env.storageBucket,
+          messagingSenderIdt: process.env.messagingSenderId,
+          appIdt: process.env.appId,
+          measurementIdt: process.env.measurementId
         },
         services: {
           database: true,
