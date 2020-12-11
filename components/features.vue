@@ -8,15 +8,7 @@
           <p>
             {{ feature.description }}
           </p>
-          <div class="text-center">
-            <v-btn
-              class="text-center"
-              @click="$router.push(`/features/${feature.slug}`)"
-              color="teal darken-2"
-              outlined
-              >Read more</v-btn
-            >
-          </div>
+          <BackButton :path="`/features/${feature.slug}`" text="Read more" />
         </v-card-text>
       </v-card>
     </v-col>
@@ -24,7 +16,9 @@
 </template>
 
 <script>
+import BackButton from "./backButton.vue";
 export default {
+  components: { BackButton },
   name: "Features",
   data() {
     return {

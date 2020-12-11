@@ -15,7 +15,7 @@
       <h2>How to stay in the loop?</h2>
       <p>
         Submit your phone number below (if you haven't already), and you will be
-        texted when the app is ready for download
+        texted when the app is ready to be downloaded.
       </p>
       <p>
         You will also be signed up for the email newsletter when it launches.
