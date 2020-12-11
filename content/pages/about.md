@@ -15,6 +15,16 @@ This website was built to promote the app and communicate the mission of the app
 
 The main goal of the Testimonies app is to grow a decentralized network of house-fellowships, or "Jesus Fellowships."
 
+<v-card tile flat height="100%">
+    <v-card-text class="black--text  pa-4">
+        <h4 class="headline font-weight-light">Card Title</h4>
+        <v-divider color="teal" class="mt-2 mb-2"></v-divider>
+        <p>
+        Body text for Card
+        </p>
+    </v-card-text>
+</v-card>
+
 ## How is this done?
 
 The app has two main functions to achieve its main goal.

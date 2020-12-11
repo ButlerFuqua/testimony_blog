@@ -7,7 +7,7 @@
     <h1>The Testimonies App</h1>
     <h2>A decentralized network of believers and their testimonies.</h2>
     <v-divider inset style="margin: 1rem auto"></v-divider>
-    <section class="infoSection text-left grey lighten-2 pa-3 mb-3">
+    <section class="infoSection text-left pa-3 mb-3">
       <Features />
     </section>
     <SignupSubmission />

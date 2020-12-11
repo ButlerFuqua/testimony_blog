@@ -14,7 +14,7 @@
 
     <v-card
       :id="belief.title.replace(/\s/g, '_')"
-      flat
+      tile
       class="ma-3"
       v-for="belief in beliefs"
       :key="belief.title"
