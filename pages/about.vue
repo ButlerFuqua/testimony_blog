@@ -1,16 +1,31 @@
 <template>
   <article>
-    <nuxt-content :document="page" />
+    <PageHeading
+      :title="page.title"
+      :subTitle="page.subTitle"
+      :body="page.bodyTitle"
+    />
+
+    <v-card class="mb-4">
+      <v-card-text class="black--text">
+        <nuxt-content :document="page" />
+      </v-card-text>
+    </v-card>
     <SignupSubmission />
-    <AboutButler />
+    <v-card class="mb-4">
+      <v-card-text class="black--text">
+        <AboutButler />
+      </v-card-text>
+    </v-card>
   </article>
 </template>
 
 <script>
 import SignupSubmission from "../components/signupSubmission.vue";
+import PageHeading from "../components/pageHeading.vue";
 import AboutButler from "../components/aboutButler";
 export default {
-  components: { SignupSubmission, AboutButler },
+  components: { SignupSubmission, AboutButler, PageHeading },
   async asyncData({ $content, params }) {
     let page;
     try {

@@ -1,29 +1,15 @@
 ---
-title: About
+title: About the Testimonies app and website
 description: This is the about page for the Testimonies.app website.
+subTitle: The testimonies app is currently in development, but I plan to launch it summer of next year (2021).
+bodyTitle: This website was built to promote the app and communicate the mission of the app.
 order_number: 1
 ---
 
 
-# About the Testimonies app
-
-The testimonies app is currently in development, but I plan to launch it summer of next year (2021).
-
-This website was built to promote the app and communicate the mission of the app.
-
 # Main goal of the app
 
 The main goal of the Testimonies app is to grow a decentralized network of house-fellowships, or "Jesus Fellowships."
-
-<v-card tile flat height="100%">
-    <v-card-text class="black--text  pa-4">
-        <h4 class="headline font-weight-light">Card Title</h4>
-        <v-divider color="teal" class="mt-2 mb-2"></v-divider>
-        <p>
-        Body text for Card
-        </p>
-    </v-card-text>
-</v-card>
 
 ## How is this done?
 

@@ -1,16 +1,12 @@
 <template>
   <v-container>
-    <h1>Statement of beliefs</h1>
-    <p>
-      I try to keep these beliefs as few as possible to avoid splitting hairs.
-    </p>
-    <p>
-      Below is the list of beliefs that I absolutley cannot comporomise on. If
+    <PageHeading
+      title="Statement of beliefs"
+      subTitle="I try to keep these beliefs as few as possible to avoid splitting hairs."
+      body="Below is the list of beliefs that I absolutley cannot comporomise on. If
       you disagree with one or more of these beliefs, then you may not be ready
-      for this community.
-    </p>
-
-    <v-divider class="mb-4"></v-divider>
+      for this community."
+    />
 
     <v-card
       :id="belief.title.replace(/\s/g, '_')"
@@ -36,6 +32,7 @@
 
 <script>
 import ChipList from "../../components/chipList";
+import PageHeading from "../../components/pageHeading.vue";
 import ReadButton from "../../components/readButton.vue";
 export default {
   async asyncData({ $content, route }) {
@@ -49,7 +46,7 @@ export default {
       beliefs,
     };
   },
-  components: { ChipList, ReadButton },
+  components: { ChipList, ReadButton, PageHeading },
 };
 </script>
     ReadButton
