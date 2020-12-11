@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     async submitPhoneNumber() {
-      if (!this.valid) return alert("Not valid!");
+      if (!this.valid) return alert("Please correctly fill out all fields.");
 
       this.loading = true;
       let phone_number = this.phoneNumber.trim().replace(" ", "");
