@@ -16,8 +16,8 @@ You will also find  the [statement of beliefs](/beliefs) that members of the app
 
 ## The mobile app
 
-Eventually, the Testimonies App will be available to download through the IOS and Google Play.
+The mobile app is currently in production.
 
-The app is currently in production.
+Eventually, the Testimonies App will be available to download through the IOS and Google Play stores.
 
 [Sign up](/signup) to be notified when the app is ready, and to stay up to date on updates from [Testimonies.app](/)

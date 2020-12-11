@@ -1,15 +1,12 @@
 <template>
-  <article v-if="feature">
-    <BackButton path="/" />
-    <nuxt-content :document="feature" />
-  </article>
+  <PageContent v-if="feature" :content="feature" path="/" />
   <article v-else>Erorr retreiving feature.</article>
 </template>
 
 <script>
-import BackButton from "../../components/backButton.vue";
+import PageContent from "../../components/pageContenet";
 export default {
-  components: { BackButton },
+  components: { PageContent },
   async asyncData({ $content, params }) {
     let feature;
     try {

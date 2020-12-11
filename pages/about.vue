@@ -21,7 +21,6 @@
       </v-card-text>
     </v-card>
 
-    <!-- <nuxt-content :document="page" /> -->
     <SignupSubmission />
     <v-card class="mb-4">
       <v-card-text class="black--text">
@@ -44,7 +43,7 @@ export default {
           title: "Main Goal of the app",
           subtitle: null,
           paragraphs: [
-            'The main goal of the Testimonies app is to grow a decentralized network of house-fellowships, or "Jesus Fellowships."',
+            'The main goal of the Testimonies app is to grow a decentralized network of house fellowships, or "Jesus Fellowships."',
           ],
         },
         {

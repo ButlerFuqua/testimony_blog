@@ -1,16 +1,12 @@
 <template>
-  <article v-if="belief">
-    <BackButton path="/beliefs" />
-    <nuxt-content :document="belief" />
-    <BackButton path="/beliefs" />
-  </article>
+  <PageContent v-if="belief" :content="belief" path="/" />
   <article v-else>Erorr retreiving belief.</article>
 </template>
 
 <script>
-import BackButton from "../../components/backButton.vue";
+import PageContent from "../../components/pageContenet";
 export default {
-  components: { BackButton },
+  components: { PageContent },
   async asyncData({ $content, params }) {
     let belief;
     try {

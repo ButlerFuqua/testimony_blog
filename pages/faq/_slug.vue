@@ -1,25 +1,12 @@
 <template>
-  <article v-if="faq">
-    <v-btn
-      style="margin: 1rem auto"
-      @click="$router.push('/faq')"
-      outlined
-      color="teal"
-      aria-label="back"
-      >Back</v-btn
-    >
-    <nuxt-content :document="faq" />
-    <v-divider style="margin: 1rem auto"></v-divider>
-
-    <SignupSubmission />
-  </article>
+  <PageContent v-if="faq" :content="faq" path="/faq" />
   <article v-else>Erorr retreiving FAQ.</article>
 </template>
 
 <script>
-import SignupSubmission from "../../components/signupSubmission";
+import PageContent from "../../components/pageContenet";
 export default {
-  components: { SignupSubmission },
+  components: { PageContent },
   async asyncData({ $content, params }) {
     let faq;
     try {
