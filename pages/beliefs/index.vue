@@ -21,9 +21,9 @@
         <v-card-actions>
           <ChipList :items="belief.verses" />
         </v-card-actions>
-        <v-card-actions>
+        <!-- <v-card-actions>
           <ReadButton :path="`/beliefs/${belief.slug}`" text="Read more" />
-        </v-card-actions>
+        </v-card-actions> -->
       </v-card-text>
       <v-divider></v-divider>
     </v-card>
