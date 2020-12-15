@@ -14,4 +14,4 @@ It is a platform for everyday Christians to establish house-fellowships, evangel
 
 The Lord is the only one in charge.
 
-Find out more about the app's features [here](/about).
+Click [here](/about) to find out more about the app's features .
