@@ -1,11 +1,11 @@
 ---
 title: Join a fellowship
-description: Find established fellowships in your local community and focus on doing the Lord's work.
+description: Find a fellowship in your area and make a difference!
 order_number: 3
 ---
 
 # Join a fellowship
 
-Find established fellowships in your local community and focus on doing the Lord's work.
+Find a fellowship in your area and make a difference!
 
 

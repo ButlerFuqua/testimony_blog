@@ -15,7 +15,7 @@
             {{ feature.description }}
           </p>
           <!-- <BackButton :path="`/features/${feature.slug}`" text="Read more" /> -->
-          <BackButton path="/about" text="Read more" />
+          <!-- <BackButton path="/about" text="Read more" /> -->
         </v-card-text>
       </v-card>
     </v-col>
