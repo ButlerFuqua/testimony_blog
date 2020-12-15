@@ -1,24 +1,16 @@
 <template>
   <v-container justify="center" align="center">
     <div class="text-center">
-      <h1 class="dislpay-4 font-weight-regular">Sign up!</h1>
+      <!-- <h1 class="dislpay-4 font-weight-regular">Sign up!</h1> -->
       <h1 v-if="numberOfSignups" class="dislpay-4 font-weight-light">
         {{ numberOfSignups }}
         signups and counting!
       </h1>
       <v-progress-circular v-else indeterminate></v-progress-circular>
-      <p>This app is still in the planning/development stage.</p>
+
       <p>
-        You have a golden opportunity to be an early adopter by being one of the
-        first people to learn about the app.
-      </p>
-      <h2>How to stay in the loop?</h2>
-      <p>
-        Submit your phone number below (if you haven't already), and you will be
-        texted when the app is ready to be downloaded.
-      </p>
-      <p>
-        You will also be signed up for the email newsletter when it launches.
+        Submit your information below (if you haven't already), and you will be
+        notified when the app is ready.
       </p>
     </div>
     <SignupSubmission />

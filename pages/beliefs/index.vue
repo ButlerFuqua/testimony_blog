@@ -2,10 +2,8 @@
   <v-container>
     <PageHeading
       title="Statement of beliefs"
-      subTitle="I try to keep these beliefs as few as possible to avoid splitting hairs."
-      body="Below is the list of beliefs that I absolutley cannot comporomise on. If
-      you disagree with one or more of these beliefs, then you may not be ready
-      for this community."
+      subTitle="I try to keep this list short to avoid splitting hairs."
+      body="These are the beliefs that I absolutley cannot comporomise on."
     />
 
     <v-card

@@ -7,10 +7,9 @@
         <p v-if="numberOfSignups" class="headline">
           Join
           {{ numberOfSignups }}
-          others who have signed up.
+          others who have signed up to be notified when the app is ready.
         </p>
         <v-progress-circular v-else indeterminate></v-progress-circular>
-        <p>Sign up below to be texted when the app is ready.</p>
         <v-row>
           <v-col cols="12" md="4">
             <v-text-field
@@ -46,8 +45,7 @@
         </v-row>
         <p>
           <small
-            >This will also sign you up for the newsletter when it launches.
-            Your information will NOT be shared with other services.</small
+            >Your information will NOT be shared with other services.</small
           >
         </p>
         <v-btn aria-label="submit" class="mt-3" @click="submitPhoneNumber"

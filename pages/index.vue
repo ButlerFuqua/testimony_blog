@@ -5,7 +5,7 @@
     </div>
 
     <h1>The Testimonies App</h1>
-    <h2>A decentralized network of believers and their testimonies.</h2>
+    <h2>Start a fellowship | Post testimonies | Grow the Body of Christ</h2>
     <v-divider inset style="margin: 1rem auto"></v-divider>
     <section class="infoSection text-left pa-3 mb-3">
       <Features />

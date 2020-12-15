@@ -5,14 +5,13 @@ order_number: 3
 ---
 
 
-### Nope! And also, yes...
-
-<br />
 
 ***YOU*** are the church! And Jesus is your leader.
 
-Posting testimonies is not the only thing the app can do. Far from it!
+The beauty of this app is that is has no governing organization that monitors its direction.
 
-You can find, join, and even start fellowships as the Lord directs.
+It is a platform for everyday Christians to establish house-fellowships, evangelize, and teach.
 
-Find out more about the purpose of the app in the [About](/about) page.
+The Lord is the only one in charge.
+
+Find out more about the app's features [here](/about).
