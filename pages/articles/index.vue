@@ -1,5 +1,8 @@
 <template>
-  <v-container>
+  <v-container v-if="!readyToPublish">
+    <CommingSoon />
+  </v-container>
+  <v-container v-else>
     <h1>Articles</h1>
     <p>Just some thoughts pertaining to life and godliness.</p>
 
@@ -39,6 +42,7 @@
 
 <script>
 import ChipList from "../../components/chipList";
+import CommingSoon from "../../components/commingSoon.vue";
 export default {
   async asyncData({ $content, route }) {
     const q = route.query.q;
@@ -51,6 +55,11 @@ export default {
       articles,
     };
   },
-  components: { ChipList },
+  components: { ChipList, CommingSoon },
+  data() {
+    return {
+      readyToPublish: false,
+    };
+  },
 };
 </script>

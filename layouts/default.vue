@@ -73,11 +73,11 @@ export default {
           title: "Beliefs",
           to: "/beliefs",
         },
-        // {
-        //   icon: "mdi-newspaper-variant-multiple",
-        //   title: "Articles",
-        //   to: "/articles",
-        // },
+        {
+          icon: "mdi-newspaper-variant-multiple",
+          title: "Articles",
+          to: "/articles",
+        },
         {
           icon: "mdi-help",
           title: "FAQ",
