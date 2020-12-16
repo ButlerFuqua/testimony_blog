@@ -1,6 +1,8 @@
 <template>
   <v-container v-if="!readyToPublish">
     <CommingSoon />
+    <v-divider class="mt-5 mb-5"></v-divider>
+    <SignupSubmission />
   </v-container>
   <v-container v-else>
     <h1>Articles</h1>
